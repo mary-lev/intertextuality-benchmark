@@ -1,7 +1,6 @@
 """Line-containment retrieval (`lc`) — ungated, idf-weighted line/window match.
 
-Motivation (see wiki tasks/poetry-detection/results/russian_poetry/line-containment.md):
-the gated lexical methods (Tesserae/Passim require >=2 shared rare lemmas, df<=4000)
+Motivation: the gated lexical methods (Tesserae/Passim require >=2 shared rare lemmas, df<=4000)
 *exclude* connections whose distinctive word is mid-frequency or whose fragment is
 short — making ~1/3 of the hard cases un-rankable at any depth. `lc` removes the gate:
 

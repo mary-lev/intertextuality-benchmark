@@ -1,7 +1,7 @@
 """Experiment: match CnP segments against the Church-Slavonic NT (cs_nt) with the SAME
 rarity-weighted Smith-Waterman matcher as cnp_match.py, and compare to the 1823-Russian
 (nt1823) result. Tests whether the CS NT recovers the «се»-register quotations the 1823
-Russian NT misses (see wiki/data/cs-nt.md, wiki/tasks/dostoevsky-bible-refs/overview.md).
+Russian NT misses.
 
     python scripts/cnp_match_cs.py    # -> results/crime_and_punishment/cnp_match_cs_raw.jsonl + a comparison report
 """

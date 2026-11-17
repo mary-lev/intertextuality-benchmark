@@ -127,9 +127,6 @@ intermediate files (`cnp_segments.jsonl`, `cnp_match_*.jsonl`,
 `cnp_dense_top5.jsonl`, `cnp_fusion_top.jsonl`, `cnp_rerank_top.jsonl`; about
 110 MB) are not; the script regenerates them.
 
-Comments in the scripts occasionally refer to a project wiki; it holds working
-notes and is not part of the release.
-
 ## Licence
 
 See `LICENSE.md`.

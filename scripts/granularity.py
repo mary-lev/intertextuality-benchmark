@@ -1,7 +1,6 @@
 """Query-granularity sensitivity: exact fragment -> containing stanza -> whole poem.
 
-The localization analog of the prior ladder (underwrites P7 in
-wiki/paper-chr2027-plan.md): hold the ranker fixed, widen the QUERY from the marked
+The localization analog of the prior ladder: hold the ranker fixed, widen the QUERY from the marked
 span to its enclosing stanza(s) to the whole commented poem, and measure the dilution.
 Two fixed rankers expose the mechanism:
 

@@ -1,8 +1,7 @@
 """CnP-frequency-weighted char-4gram scorer  (toggle: `wchar`).
 
 The validated fix for `char`'s degenerate `overlap_coef` (short-verse attractors, perfect-1.0
-short-interjection noise — see wiki tasks/dostoevsky-bible-refs/retrieval-sweep/char-method-review.md,
-"Resolution"). Each (sentence, NT verse) is scored by the summed weight of their shared character
+short-interjection noise). Each (sentence, NT verse) is scored by the summed weight of their shared character
 4-grams, where every gram is weighted by its rarity in the NOVEL:
 
     score = sum over shared grams of  CnP_idf(g)

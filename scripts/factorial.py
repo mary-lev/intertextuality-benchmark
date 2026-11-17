@@ -1,7 +1,6 @@
 """The paper's factorial: signal-class x intertext-type detectability profiles.
 
-One CANONICAL probe per signal class (wiki/paper-chr2027-plan.md "The experimental
-design"), run over ALL 158 grounded poetry connections (S1-S4; S3/S4 queries fall back
+One CANONICAL probe per signal class, run over ALL 158 grounded poetry connections (S1-S4; S3/S4 queries fall back
 to the whole commented poem, per ngram_baseline.load_gold):
 
   signal class              probe        implementation
@@ -29,14 +28,10 @@ Outputs (results/russian_poetry/):
 
     python scripts/factorial.py          # from the release root; needs lemma + MiniLM caches
 
-    CHRONO=1 python scripts/factorial.py # the five computed probes with the chronology
-                                           # filter (ngram_baseline.not_later); writes only
-                                           # factorial_ranks_chrono.csv
-
 Deterministic; no API calls (the rerank column is read from the persisted run).
 """
 from __future__ import annotations
-import csv, math, os, sys
+import csv, math, sys
 from collections import defaultdict
 
 import numpy as np
@@ -54,7 +49,6 @@ csv.field_size_limit(10 ** 8)
 PROBES = ("ngram", "passim", "bm25", "wpair", "dense", "rerank")
 KS = (1, 5, 10, 50)
 LEMMAS = nb.HERE + "cache/lemmas/poetree_lemmas.csv"
-CHRONO = os.environ.get("CHRONO", "0") == "1"
 
 
 def main():
@@ -120,21 +114,18 @@ def main():
 
     print(f"scoring {len(gold)} connections x {len(PROBES)} probes…", file=sys.stderr)
     rows = []
-    years = nb.load_years() if CHRONO else {}
     for gi, g in enumerate(gold):
         ranks = {}
-        ok = nb.not_later(years, g["self"])                    # always true without CHRONO
-        keep = (lambda sc: {p: v for p, v in sc.items() if ok(p)}) if CHRONO else (lambda sc: sc)
         # ngram
         scores = nb.rank(nb.word_ngrams(g["q_frag"], 2), ng_index, ng_idf)
         for s in g["self"]:
             scores.pop(s, None)
-        ranks["ngram"] = nb.best_rank(keep(scores), g["hit"])
+        ranks["ngram"] = nb.best_rank(scores, g["hit"])
         # bm25
         bms = bm.bm25_rank(g["q_frag"].split(), postings, doclen, idf_bm, avgdl)
         for s in g["self"]:
             bms.pop(s, None)
-        ranks["bm25"] = nb.best_rank(keep(bms), g["hit"])
+        ranks["bm25"] = nb.best_rank(bms, g["hit"])
         # passim (gated candidates, SW over lemma seqs)
         Q = content_lemmas("".join(mys.lemmatize(g["q_frag"])))
         qset = set(Q)
@@ -143,10 +134,10 @@ def main():
             if w in inv and len(inv[w]) <= DF_CAP:
                 for pid in inv[w]:
                     cand[pid] += 1
-        cands = [pid for pid, c in cand.items() if c >= MIN_SHARED and pid not in g["self"] and ok(pid)]
+        cands = [pid for pid, c in cand.items() if c >= MIN_SHARED and pid not in g["self"]]
         ranks["passim"] = nb.best_rank({pid: sw(Q, seqs[pid], idf_lem) for pid in cands}, g["hit"])
         # wpair
-        ranks["wpair"] = nb.best_rank(keep(wp.score(Q, wp_keep, wp_pidf, wp_inv, g["self"])), g["hit"])
+        ranks["wpair"] = nb.best_rank(wp.score(Q, wp_keep, wp_pidf, wp_inv, g["self"]), g["hit"])
         # dense (line-to-line max-sim; recover verse lines of the fragment when possible)
         frag_lines = None
         for sid in g["self"]:
@@ -165,7 +156,7 @@ def main():
             if s in pidx_d:
                 poem_max[pidx_d[s]] = -1e9
         ranks["dense"] = nb.best_rank(
-            keep({pids_d[i]: float(poem_max[i]) for i in range(len(pids_d)) if poem_max[i] > -1e8}),
+            {pids_d[i]: float(poem_max[i]) for i in range(len(pids_d)) if poem_max[i] > -1e8},
             g["hit"])
         # rerank (persisted; S1/S2 fragment pool only)
         ranks["rerank"] = rr.get(g["conn_id"])
@@ -175,13 +166,6 @@ def main():
         if (gi + 1) % 20 == 0:
             print(f"  {gi+1}/{len(gold)}", file=sys.stderr)
 
-    if CHRONO:        # separate file; the profile files of the paper are not rewritten
-        with open(nb.HERE + "results/russian_poetry/factorial_ranks_chrono.csv", "w", encoding="utf-8", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=["conn_id", "stratum", "band", *PROBES[:-1]])
-            w.writeheader()
-            w.writerows({k: r[k] for k in w.fieldnames} for r in rows)
-        print("wrote factorial_ranks_chrono.csv", file=sys.stderr)
-        return
     with open(nb.HERE + "results/russian_poetry/factorial_ranks.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["conn_id", "stratum", "band", "in_rerank_pool", *PROBES])
         w.writeheader(); w.writerows(rows)

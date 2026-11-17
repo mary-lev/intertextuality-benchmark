@@ -9,7 +9,7 @@ authors:
     affiliation: University of Bologna
 repository-code: "https://github.com/mary-lev/intertextuality-benchmark"
 doi: 10.5281/zenodo.24309021
-version: v1.1.0
+version: v1.1.1
 license: CC-BY-4.0
 keywords:
   - intertextuality detection

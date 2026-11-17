@@ -206,4 +206,5 @@ def summary():
         report(f"idioms in {lo}-{hi} poems", [r for r in rows if lo <= len(n[r["idiom"]]) <= hi])
 
 
-{"lexical": lexical, "dense": dense, "summary": summary}[STAGE]()
+if __name__ == "__main__":
+    {"lexical": lexical, "dense": dense, "summary": summary}[STAGE]()

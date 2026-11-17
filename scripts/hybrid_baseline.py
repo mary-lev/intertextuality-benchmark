@@ -45,9 +45,6 @@ USE_LC = os.environ.get("USE_LC", "1") == "1"         # +lc (ungated line-contai
 # SCOPE=whole runs the same fusion on the relations WITHOUT a query-side fragment (S3/S4: the
 # query is the whole commented poem) and writes *_wholepoem.csv; the default files are untouched.
 WHOLE = os.environ.get("SCOPE", "fragment") == "whole"
-# CHRONO=1 applies the chronology filter (ngram_baseline.not_later) to every component before
-# the fusion and writes *_chrono.csv; the default files are untouched.
-CHRONO = os.environ.get("CHRONO", "0") == "1"
 
 
 def topn(scores, n=TOPN):
@@ -116,15 +113,12 @@ def main():
     fused_ranks, fused5_ranks, fusedD_ranks, rows = [], [], [], []
     varrows = []          # per-conn variant ranks (invariance verification; output-only)
     fband = defaultdict(list)                        # band -> [(fused4_rank, fused5_rank, fusedD_rank)]
-    years = nb.load_years() if CHRONO else {}
     for gi, g in enumerate(gold):
-        ok = nb.not_later(years, g["self"])                    # always true without CHRONO
-        keep = (lambda sc: {p: v for p, v in sc.items() if ok(p)}) if CHRONO else (lambda sc: sc)
         # ---- BM25 ----
         bms = bm.bm25_rank(g["q_frag"].split(), postings, doclen, idf_bm, avgdl)
         for s in g["self"]:
             bms.pop(s, None)
-        L = {"bm25": topn(keep(bms))}
+        L = {"bm25": topn(bms)}
 
         # ---- lemma candidate set (shared >=2 rare lemmas) for Tesserae + Passim ----
         Q = content_lemmas("".join(mys.lemmatize(g["q_frag"])))
@@ -134,7 +128,7 @@ def main():
             if w in inv and len(inv[w]) <= DF_CAP:
                 for pid in inv[w]:
                     cand[pid] += 1
-        cands = [pid for pid, c in cand.items() if c >= MIN_SHARED and pid not in g["self"] and ok(pid)]
+        cands = [pid for pid, c in cand.items() if c >= MIN_SHARED and pid not in g["self"]]
         tess = {}
         for pid in cands:
             best = 0.0
@@ -166,19 +160,15 @@ def main():
         for s in g["self"]:
             if s in pidx_d:
                 poem_max[pidx_d[s]] = -1e9
-        if CHRONO:
-            for i, pid in enumerate(pids_d):
-                if not ok(pid):
-                    poem_max[i] = -1e9
         order = np.argsort(-poem_max)[:TOPN]
         L["dense"] = [pids_d[i] for i in order]
 
         # ---- wpair distinctive-pair ranking ----
-        L["wpair"] = topn(keep(wp.score(Q, wp_keep, wp_pidf, wp_inv, g["self"])))
+        L["wpair"] = topn(wp.score(Q, wp_keep, wp_pidf, wp_inv, g["self"]))
 
         # ---- lc: ungated idf line-containment (recovers gate-excluded golds) ----
         if USE_LC:
-            L["lc"] = topn(keep(lcb.lc_rank(Q, lem_lines, inv, idf_lem, g["self"])))
+            L["lc"] = topn(lcb.lc_rank(Q, lem_lines, inv, idf_lem, g["self"]))
 
         # ---- per-method gold ranks (for the comparison table) ----
         for mname in methodsD:
@@ -235,8 +225,7 @@ def main():
         print(f"  {b:10s} n={len(rs):3d}  R@5 {rk(f4,5):.2f}->{rk(f5,5):.2f}->{rk(fd,5):.2f}   "
               f"R@10 {rk(f4,10):.2f}->{rk(f5,10):.2f}->{rk(fd,10):.2f}")
 
-    tag = ("" if "MiniLM" in ld.MODEL else "_" + ld.MODEL.split("/")[-1]) + ("_wholepoem" if WHOLE else "") \
-        + ("_chrono" if CHRONO else "")
+    tag = ("" if "MiniLM" in ld.MODEL else "_" + ld.MODEL.split("/")[-1]) + ("_wholepoem" if WHOLE else "")
     with open(nb.HERE + f"results/russian_poetry/hybrid_shortlist{tag}.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["conn_id", "band", "shortlist", "gold_rank_fused"])
         w.writeheader(); w.writerows(rows)

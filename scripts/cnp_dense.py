@@ -119,7 +119,7 @@ def main():
     # cos - vmean[verse] — surfaces the SPECIFIC matches and, unlike a per-segment z-score, does NOT
     # penalise short biblical-register phrases. It also makes the score COMPARABLE ACROSS segments
     # (raw thematic golds sit at/below the 0.666 corpus median; centered they rise above p90), so the
-    # top-1 cos_c becomes thresholdable. Measured 2026-06-25 (see neural-family wiki).
+    # top-1 cos_c becomes thresholdable. Measured 2026-06-25.
     print(f"pass 1/2: per-verse hubness…", file=sys.stderr)
     vsum = np.zeros(len(nt_texts), np.float64)
     for c0 in range(0, len(segs), CHUNK):

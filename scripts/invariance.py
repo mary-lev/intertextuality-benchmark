@@ -1,4 +1,4 @@
-"""Profile-invariance verification (W2 hypothesis test, wiki/paper-chr2027-plan.md).
+"""Profile-invariance verification (paper §5, robustness).
 
 Hypothesis: configuration variants shift absolute numbers but not the TYPOLOGY-LEVEL
 pattern (the band profile). If confirmed, tuning that cannot move a profile cannot

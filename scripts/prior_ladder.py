@@ -5,12 +5,12 @@ SOURCE? Each rung restricts the BM25 candidate pool by increasingly specific kno
 of the referent (Poetree metadata), holding the ranker fixed (BM25, poem_id tiebreak —
 same harness as author_oracle.py, which is the top rung).
 
-DESIGN NOTE (deviation from wiki/paper-chr2027-plan.md): the planned "genre/meter" rung
+DESIGN NOTE: a "genre/meter" rung
 is NOT implementable — the Poetree extract carries no meter/genre field (only
 author_name, year_created_from, line/stanza counts). The intermediate gradation is
 instead the PERIOD WINDOW WIDTH around the referent poem's creation year (+-50/25/10
-years) — a judgment call; alternatives (canonical literary-period buckets, author
-birth-year windows) are noted in the wiki page.
+years) — a judgment call; canonical literary-period buckets or author birth-year
+windows would be alternatives.
 
 Eval basis: connections whose referent is a Poetree poem with BOTH author and year
 metadata — the SAME subset on every rung, so rungs are comparable. Reports ALL /

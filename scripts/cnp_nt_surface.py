@@ -4,8 +4,7 @@ Scores the shared words by **CnP-idf** (rarity in the novel) instead of NT-idf: 
 Dostoevsky's prose (e.g. «по крайней мере») is down-weighted to near-zero, so novel-idiom attractors
 collapse — `1Кор 9:2` («крайней мере») went 121×→4×, the worst attractor profile flattened (max ~23×
 vs 121×), and real finds rise (`Лк 7:47` #6→#1, with the synoptic «прощаются грехи» parallels). Gold
-preserved; candidate generation, floor (15), and top-5 unchanged. See the methods wiki / char-method
-review for the CnP-weighting rationale (validated head-to-head 2026-06-25).
+preserved; candidate generation, floor (15), and top-5 unchanged (compared head to head, 2026-06-25).
 """
 import json
 import math
@@ -39,7 +38,7 @@ if __name__ == "__main__":
     # (the longest adjacent shared-word run in the verse, summed CnP-idf). The bonus is re-rank
     # only — it surfaces contiguous quotations (the Lord's Prayer «приидет царствие твое» rises
     # to the top) and sinks scattered-word coincidences of the same rarity, without changing the
-    # candidate set. See the proximity experiment in the methods/char-method-review wiki.
+    # candidate set.
     n = surface_match("data/crime_and_punishment/nt1823.jsonl", "nt_ref", "results/crime_and_punishment/cnp_nt_surface.jsonl",
                       floor=22.0, topk=5, score_idf=ci, proximity_idf=ci)
     print(f"{n} NT surface connections (CnP-idf + contiguity bonus, floor 22, top-5) "
