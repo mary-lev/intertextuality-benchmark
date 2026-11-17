@@ -236,7 +236,7 @@ def main():
     show(rows, f"Dante — whole passage as query, all relations (n={len(rows)}, {npass(rows)} passages)", "whole")
     if OPEN:
         ver = [r for r in loc if r["referent_corpus"] == "verified"]
-        show(ver, f"Dante — widened lemma, verified-corpus relations only (n={len(ver)})", "wide")
+        show(ver, f"Dante — widened anchor, 60-poem subset only (n={len(ver)})", "wide")
         oth = [r for r in loc if r["referent_corpus"] != "verified"]
         show(oth, f"Dante — widened lemma, relations added from Biblioteca Italiana (n={len(oth)})", "wide")
     for b in ("verbatim", "close", "loose"):

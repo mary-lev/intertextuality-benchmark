@@ -16,8 +16,8 @@ rank 2 to 3 — because rare-in-NT grams can sit in coincidental noise too. The 
 purely "is this gram unusual in Dostoevsky's prose", i.e. CnP rarity. (DF over the novel's sentences,
 not words — wchar is character-level throughout.)
 
-Unlike `char`, this KEEPS the per-candidate score (in `top[].score`). Output is drop-in for the
-consolidator's enrich-only reader (`_RAW_TOPK`): `top` is a list of {nt_ref, score}.
+Unlike `char`, this KEEPS the per-candidate score (in `top[].score`). In the output, `top` is a list
+of {nt_ref, score}.
 
     python scripts/cnp_wchar.py   # -> results/crime_and_punishment/cnp_wchar_top5.jsonl  (+ gold-reach self-check)
 """
@@ -28,7 +28,7 @@ import sys
 from collections import defaultdict
 
 import ngram_baseline as nb
-from cnp_lexical_extra import char_ngrams   # reuse the exact normalize + 4-gram tokenizer
+from cnp_char import char_ngrams   # reuse the exact normalize + 4-gram tokenizer
 
 H = nb.HERE
 TOPK = 5

@@ -78,7 +78,7 @@ def surface_match(ref_file, ref_key, out_file, *, floor, topk, df_cap=DF_CAP, mi
 
     rows = []
     # process every segment level (sentence + clause), like the original CS matcher;
-    # the consolidator normalizes clause->sentence via sent(). Clause ids (…/sN/cM)
+    # a clause id (…/sN/cM) counts for its sentence. Clause ids
     # are where short embedded quotes (e.g. «Се человек») surface.
     for s in (json.loads(x) for x in open(H + "results/crime_and_punishment/cnp_segments.jsonl", encoding="utf-8")):
         Q = set(toks(s["text"]))

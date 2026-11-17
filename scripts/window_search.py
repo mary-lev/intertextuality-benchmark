@@ -40,7 +40,7 @@ csv.field_size_limit(10 ** 9)
 POEMS = os.environ.get("POEMS", "mandl-009,mandl-146,mandl-256").split(",")
 SIZES = (1, 2, 4)
 PROBES = [("ngram", "surface (word 2-grams)"), ("passim", "alignment (lemmas)"),
-          ("bm25", "bag (BM25)"), ("wpair", "collocation"), ("dense", "dense (E5)"),
+          ("bm25", "BM25"), ("wpair", "collocation"), ("dense", "dense (E5)"),
           ("fusion", "fusion (RRF of the five)")]
 KEEP, SHOW, TOPN, C = 10, 5, 100, 60
 LEMMAS = nb.HERE + "cache/lemmas/poetree_lemmas.csv"

@@ -317,7 +317,7 @@ def main():
                     "attested_by": set(), "merged_from": set(),
                     "referent_corpus": "verified" if k in verified_keys else "biblioteca_italiana",
                     "category": "poetry", "verified": "source-benchmark",
-                    "provenance": "DanteSources notes graph + Zhang et al. (2026) citation pairs",
+                    "provenance": "DanteSources notes graph and citations",
                 }
             row["attested_by"].add(p["dante_work"])
             if p["dante_paragraph"] != q:
