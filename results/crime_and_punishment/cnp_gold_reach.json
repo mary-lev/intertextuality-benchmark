@@ -1,0 +1,234 @@
+[
+ {
+  "id": "c7",
+  "type": "thematic",
+  "nt_ref": "Мф 10:26-27",
+  "paragraph_ref": "ч1.гл2:p63",
+  "in_scope": false,
+  "methods": [
+   "char",
+   "dense"
+  ]
+ },
+ {
+  "id": "c8",
+  "type": "quotation",
+  "nt_ref": "Ин 19:5",
+  "paragraph_ref": "ч1.гл2:p63",
+  "in_scope": true,
+  "methods": [
+   "cs_surface"
+  ]
+ },
+ {
+  "id": "c19",
+  "type": "quotation",
+  "nt_ref": "Лк 7:47-48",
+  "paragraph_ref": "ч1.гл2:p83",
+  "in_scope": true,
+  "methods": [
+   "bm25",
+   "char",
+   "dense",
+   "fusion",
+   "nt_surface",
+   "rerank",
+   "sw",
+   "tesserae",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c97",
+  "type": "thematic",
+  "nt_ref": "Лк 16:19-31",
+  "paragraph_ref": "ч3.гл4:p1738",
+  "in_scope": false,
+  "methods": [
+   "dense"
+  ]
+ },
+ {
+  "id": "c102",
+  "type": "allusion",
+  "nt_ref": "Откр 21:2",
+  "paragraph_ref": "ч3.гл5:p1855",
+  "in_scope": true,
+  "methods": [
+   "char",
+   "rerank",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c123",
+  "type": "meta/narrative",
+  "nt_ref": null,
+  "paragraph_ref": "ч4.гл4:p2403",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "c125",
+  "type": "quotation",
+  "nt_ref": "Ин 11:1",
+  "paragraph_ref": "ч4.гл4:p2436",
+  "in_scope": true,
+  "methods": [
+   "char",
+   "cs_surface",
+   "cs_sw",
+   "fusion",
+   "nt_surface",
+   "rerank",
+   "sw",
+   "tesserae",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c126",
+  "type": "quotation",
+  "nt_ref": "Ин 11:19-22",
+  "paragraph_ref": "ч4.гл4:p2438",
+  "in_scope": true,
+  "methods": [
+   "bm25",
+   "char",
+   "cs_surface",
+   "cs_sw",
+   "dense",
+   "fusion",
+   "nt_surface",
+   "rerank",
+   "sw",
+   "tesserae",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c127",
+  "type": "quotation",
+  "nt_ref": "Ин 11:23-28",
+  "paragraph_ref": "ч4.гл4:p2442",
+  "in_scope": true,
+  "methods": [
+   "bm25",
+   "char",
+   "cs_surface",
+   "cs_sw",
+   "dense",
+   "fusion",
+   "nt_surface",
+   "rerank",
+   "sw",
+   "tesserae",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c128",
+  "type": "meta/narrative",
+  "nt_ref": null,
+  "paragraph_ref": "ч4.гл4:p2443",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "c129",
+  "type": "quotation",
+  "nt_ref": "Ин 11:38-39",
+  "paragraph_ref": "ч4.гл4:p2446",
+  "in_scope": true,
+  "methods": [
+   "bm25",
+   "char",
+   "cs_surface",
+   "dense",
+   "fusion",
+   "nt_surface",
+   "rerank",
+   "sw",
+   "tesserae",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c130",
+  "type": "meta/narrative",
+  "nt_ref": "Откр 14:6",
+  "paragraph_ref": "ч4.гл4:p2453",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "c131",
+  "type": "quotation",
+  "nt_ref": "Мк 10:14",
+  "paragraph_ref": "ч4.гл4:p2466",
+  "in_scope": true,
+  "methods": [
+   "char",
+   "cs_sw",
+   "dense",
+   "fusion",
+   "rerank",
+   "wchar",
+   "wpair"
+  ]
+ },
+ {
+  "id": "c171",
+  "type": "meta/narrative",
+  "nt_ref": null,
+  "paragraph_ref": "ч6.гл2:p3201",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "c196",
+  "type": "thematic",
+  "nt_ref": null,
+  "paragraph_ref": "эп.гл2:p3743",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "c197",
+  "type": "meta/narrative",
+  "nt_ref": null,
+  "paragraph_ref": "эп.гл2:p3755",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "t1",
+  "type": "allusion",
+  "nt_ref": "Мк 9:25",
+  "paragraph_ref": "ч2.гл2:p609",
+  "in_scope": true,
+  "methods": []
+ },
+ {
+  "id": "t2",
+  "type": "thematic",
+  "nt_ref": "Лк 8:27",
+  "paragraph_ref": "ч3.гл3:p1582",
+  "in_scope": false,
+  "methods": []
+ },
+ {
+  "id": "t3",
+  "type": "thematic",
+  "nt_ref": "Мк 5:3-5",
+  "paragraph_ref": "ч3.гл3:p1582",
+  "in_scope": false,
+  "methods": []
+ }
+]

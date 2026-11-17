@@ -30,11 +30,13 @@ def section6():
     print("== §6 Crime and Punishment ==")
     gold = {r["id"]: r for r in jsonl(nb.HERE + "data/crime_and_punishment/gold.jsonl")}
     print("  relation types:", dict(Counter(r["type"] for r in gold.values())))
-    ov = json.load(open(nb.HERE + "results/crime_and_punishment/cnp_gold_overlay.json", encoding="utf-8"))
-    scope = [r for r in ov if r["type"] in ("quotation", "allusion")]
-    print(f"  in scope {len(scope)}; reached by some probe {sum(bool(r['methods']) for r in scope)}; "
+    reach = json.load(open(nb.HERE + "results/crime_and_punishment/cnp_gold_reach.json", encoding="utf-8"))
+    scope = [r for r in reach if r["in_scope"]]
+    print(f"  in scope {len(scope)}; reached by some method {sum(bool(r['methods']) for r in scope)}; "
           f"by rank fusion {sum('fusion' in r['methods'] for r in scope)}; "
-          f"missed: {[r['ref_str'] for r in scope if not r['methods']]}")
+          f"missed: {[r['nt_ref'] for r in scope if not r['methods']]}")
+    for r in scope:
+        print(f"    {r['id']:5s} {r['nt_ref']:12s} {', '.join(r['methods']) or '-'}")
 
     nov = {r["ref"]: r["text"] for r in jsonl(nb.HERE + "data/crime_and_punishment/crime_and_punishment.jsonl")}
     nt = {r["ref"]: r["text"] for r in jsonl(nb.HERE + "data/crime_and_punishment/nt1823.jsonl")}

@@ -43,5 +43,7 @@ licences above:
 - the texts of *Crime and Punishment* (as reproduced by the Russian Virtual
   Library), of the 1823 Russian New Testament and of the Church Slavonic New
   Testament in `data/crime_and_punishment/`;
+- the idiom list in `data/russian_poetry/idiom_candidates.csv`, from the Russian
+  Wiktionary (CC BY-SA);
 - the DanteSources extract and the Biblioteca Italiana texts in `data/dante/source/`;
 - the quotations from Nardi's commentary in `data/manzoni/`.

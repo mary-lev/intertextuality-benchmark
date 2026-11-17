@@ -1,20 +1,11 @@
-"""Two more lexical methods from the survey §5, both cheap:
+"""Character 4-gram retrieval for the Crime and Punishment set: overlap coefficient over the
+character 4-grams of the normalized surface, top five verses per sentence.
 
-  * OVERLAP COEFFICIENT  |A∩B| / min(|A|,|B|) over content-lemma sets — the survey notes it is
-    "better when lengths differ greatly, e.g. a short quote in a long work", i.e. the embedded-quote
-    case. (Jaccard would penalize the short side; the min-normalization does not.)
-  * CHAR n-gram  overlap coefficient over character 4-grams of the normalized surface — the
-    character-level family the survey recommends for OCR/orthographic noise (here a robustness check;
-    our corpus is clean so it should track the lemma methods). This is the scalable stand-in for
-    edit/Levenshtein distance (§5), which is the same idea at pairwise granularity.
-
-    python scripts/cnp_lexical_extra.py   # -> results/crime_and_punishment/cnp_overlap_top5.jsonl, results/crime_and_punishment/cnp_char_top5.jsonl
-                                            #    + reach vs gold (overlap / char / BM25 / Tesserae)
+    python scripts/cnp_char.py   # -> results/crime_and_punishment/cnp_char_top5.jsonl
 """
 import json, re, sys
 from collections import defaultdict
 import ngram_baseline as nb
-from cnp_eval_commentary import load_gold
 from cnp_match import _content
 
 CACHE = nb.HERE + "cache/lemmas/"
@@ -121,55 +112,11 @@ def write(path, d):
 
 
 def main():
-    vlem, slem = load_lemma_sets()
-    print(f"overlap-coefficient over content lemmas ({len(slem)} sentences)…", file=sys.stderr)
-    ov = retrieve(slem, vlem, min_share=2)
-    write(nb.HERE + "results/crime_and_punishment/cnp_overlap_top5.jsonl", ov)
-
     vsurf, ssurf = load_surface()
     print("char-4gram overlap…", file=sys.stderr)
     vchar = {r: char_ngrams(t) for r, t in vsurf.items()}
     schar = {s: char_ngrams(t) for s, t in ssurf.items()}
-    ch = retrieve(schar, vchar, min_share=3)
-    write(nb.HERE + "results/crime_and_punishment/cnp_char_top5.jsonl", ch)
-
-    # reach vs gold, alongside BM25/Tesserae
-    P_ov, P_ch = by_para(ov), by_para(ch)
-    P_bm = by_para(load_top(nb.HERE + "results/crime_and_punishment/cnp_bm25_top5.jsonl"))
-    P_te = by_para(load_top(nb.HERE + "results/crime_and_punishment/cnp_tesserae_top5.jsonl"))
-    paras = [(p["ref"], normg(p["text"])) for p in
-             (json.loads(l) for l in open(nb.HERE + "data/crime_and_punishment/crime_and_punishment.jsonl", encoding="utf-8"))]
-
-    def find_para(frag):
-        for key in sorted([s.strip() for s in re.split(r"~|\.\.\.|…", normg(frag))], key=len, reverse=True):
-            if len(key) >= 6:
-                for ref, txt in paras:
-                    if key[:30] in txt:
-                        return ref
-        return None
-
-    gold = load_gold()   # the frozen gold, (bk, ch, gv) parsed from nt_ref
-    tot = defaultdict(int)
-    print(f"\n{'gold':9} {'para':14} {'over':5}{'char':5}{'bm25':5}{'tess':5} fragment")
-    for g in gold:
-        bk, ch_ = g["bk"], g["ch"]
-        if not bk or ch_ is None:
-            continue
-        pr = find_para(g["fragment"])
-        if not pr:
-            continue
-        key = (bk, ch_)
-        h = {"over": key in P_ov.get(pr, set()), "char": key in P_ch.get(pr, set()),
-             "bm25": key in P_bm.get(pr, set()), "tess": key in P_te.get(pr, set())}
-        for k, v in h.items():
-            tot[k] += v
-        tot["n"] += 1
-        b = lambda x: "Y" if x else "·"
-        print(f"{bk+' '+str(ch_):9} {pr:14} {b(h['over']):5}{b(h['char']):5}{b(h['bm25']):5}"
-              f"{b(h['tess']):5} {g['fragment'][:28]}")
-    n = tot["n"]
-    print(f"\nreach over {n} gold notes (top-{TOPK}): overlap-coef {tot['over']}/{n} · "
-          f"char-4gram {tot['char']}/{n} · bm25 {tot['bm25']}/{n} · tesserae {tot['tess']}/{n}")
+    write(nb.HERE + "results/crime_and_punishment/cnp_char_top5.jsonl", retrieve(schar, vchar, min_share=3))
 
 
 if __name__ == "__main__":
