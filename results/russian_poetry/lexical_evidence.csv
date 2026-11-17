@@ -1,0 +1,101 @@
+conn_id,band,shorter_span_words,longest_shared_run,shared_content_words,shared_words,rarest_shared_df,wording_class,lexical_anchor
+0,close,4,2,2,смертельно; устал,89,varied,yes
+1,loose,10,2,3,приемлю; люблю; землю,319,reworked,yes
+2,loose,9,1,2,саду / сад; качели,57,reworked,yes
+3,loose,8,2,2,дано / дал; тело,2290,reworked,yes
+7,close,4,0,2,призрачна / призрачной; свобода / свободе,261,varied,yes
+8,close,5,2,1,болезненный,133,reworked,yes
+11,close,1,1,1,омут,169,single_word,yes
+12,loose,3,0,1,окно / окна,3055,loose,no
+14,verbatim,2,2,2,дышит; грудь,2868,verbatim,yes
+15,verbatim,2,2,2,кроет; ложе,250,verbatim,yes
+17,loose,13,2,3,чужие; люди; заботе / заботам,1113,reworked,yes
+18,loose,3,1,1,отчизне,746,loose,no
+19,close,2,0,2,двойным / двойного; бытием / бытия,247,varied,yes
+20,loose,14,2,3,нужен; раковина; жемчужин,92,reworked,yes
+21,loose,3,1,2,беда; стряслась,20,varied,yes
+23,loose,5,0,2,душа / душе; бездною / бездне,1612,reworked,yes
+24,loose,11,1,1,камни / камень,2372,loose,no
+27,loose,12,1,1,предтечи,129,loose,yes
+36,loose,14,1,2,трубы; губы,1018,reworked,yes
+41,loose,2,0,1,горький / горек,1460,loose,no
+43,loose,6,0,2,гиганта / гигант; скалою / скале,208,reworked,yes
+44,loose,7,1,2,румяной / румяною; зарею,641,reworked,yes
+45,loose,12,1,2,акаций; граций,109,reworked,yes
+60,loose,14,1,1,головы,3081,loose,no
+64,verbatim,3,3,2,печаль; светла,2646,verbatim,yes
+65,loose,13,2,4,спадают / спадая; плеч; шали / шаль; голос,144,reworked,yes
+67,close,7,2,1,мира,7742,reworked,yes
+70,loose,3,1,1,князь,574,loose,no
+72,close,2,1,2,лиру; строим / строят,412,varied,yes
+73,close,2,1,2,лиру; строим / строил,412,varied,yes
+74,loose,5,2,3,обрасти / оброс; косматым; руном,92,reworked,yes
+75,loose,28,1,4,ветер; принес; лазури; небес / неба,929,reworked,yes
+76,close,1,1,1,азраил,18,single_word,yes
+78,loose,3,0,1,крылья / крыльев,2356,loose,no
+80,loose,5,0,2,играет / играть; позвоночником / позвоночнике,13,reworked,yes
+81,loose,2,0,2,весною / весна; черною / черная,3175,varied,yes
+85,loose,5,1,1,снилась,876,loose,no
+87,loose,6,1,1,пью / пьем,1887,loose,no
+95,loose,4,3,3,понял; жизни; цель,944,verbatim,yes
+96,loose,5,1,0,,,loose,no
+116,verbatim,4,4,3,смесь; одежд; лиц,116,verbatim,yes
+125,loose,11,1,1,музу / муза,1512,loose,no
+133,close,2,1,2,выстрел; вечерний,172,varied,yes
+135,close,4,3,3,думы / дума; волна; волной,2246,verbatim,yes
+136,loose,15,1,5,луна; высоты / высот; стекло / стекла; лучами / лучем; полу,735,reworked,yes
+144,loose,4,1,1,любить,6053,loose,no
+147,loose,6,1,0,,,loose,no
+148,loose,6,1,1,кольцо / кольца,753,loose,no
+151,loose,6,3,1,шиллере,22,reworked,yes
+152,loose,13,1,3,талисманом / талисман; душа / души; обманом / обман,75,reworked,yes
+153,close,4,3,4,тревожит / тревожить; язвы; старых; ран,196,verbatim,yes
+168,close,3,2,2,приличьем; скрашенный,24,reworked,yes
+173,close,3,2,3,вдали; рассыпанные; хаты,261,varied,yes
+175,close,6,4,1,шумите,1807,reworked,yes
+177,loose,4,0,1,туманная / туманное,922,loose,no
+178,verbatim,3,3,3,придет; желанная; пора,788,verbatim,yes
+187,loose,4,1,1,человек,6536,loose,no
+189,loose,9,1,2,содержит / содержишь; живит / живишь,55,reworked,yes
+193,close,18,3,5,взор; сатурн; несытый; парит; развалин,82,reworked,yes
+199,loose,3,1,1,юношей,936,loose,no
+200,loose,12,1,4,главу; россия / россию; вознесшись / вознес; небу / небес,5,reworked,yes
+207,close,9,4,5,солнце; дней; затмится; зарю; оставя,125,varied,yes
+216,close,4,1,0,,,loose,no
+221,close,4,1,2,осени; рука,960,reworked,yes
+257,verbatim,8,8,6,час; равнодушного; свиданья; вспомним; грустное; прости,251,verbatim,yes
+258,close,5,2,2,царства; снега,1118,reworked,yes
+259,loose,6,2,1,душа,10576,reworked,yes
+260,close,6,1,2,мало; много,1388,reworked,yes
+261,loose,5,1,2,чистейший / чистый; храм,1679,reworked,yes
+262,close,3,1,3,легли; тени; вечерние,1446,varied,yes
+263,loose,4,0,1,суевернее / суеверней,37,loose,yes
+264,loose,7,2,3,желтый; лист; кружится,632,reworked,yes
+265,close,4,1,2,лениво / ленивой; облака,230,reworked,yes
+266,loose,4,2,3,шли; стезею / стезей; лазурною / лазурной,437,varied,yes
+267,loose,3,1,1,око,4210,loose,no
+268,loose,3,1,1,око,4210,loose,no
+269,loose,6,2,2,летит; востоку,930,reworked,yes
+270,loose,5,2,1,востоку,930,reworked,yes
+271,close,6,4,2,шел; тьме,2793,reworked,yes
+272,close,4,1,1,перепутье / перепутьи,27,loose,yes
+273,loose,9,0,3,немеркнущим / немеркнущем; сияньем / сиянье; душа / душой,56,reworked,yes
+275,loose,7,1,0,,,loose,no
+276,verbatim,4,3,3,отголосок; юных; дней,104,verbatim,yes
+277,loose,4,1,2,вечно; юная / юной,1767,reworked,yes
+279,verbatim,5,3,3,сохраним / сохраню; душе; глубоко,632,varied,yes
+280,verbatim,4,3,2,преддверьи; идеала,99,reworked,yes
+281,verbatim,4,3,2,путник; запоздалый,126,verbatim,yes
+282,loose,5,1,2,храмине / храмины; пустой,96,varied,yes
+283,close,5,3,1,храмине,96,reworked,yes
+284,loose,4,0,0,,,loose,no
+285,loose,5,1,3,любил / люблю; плачут; дети,2424,varied,yes
+286,loose,4,1,2,роза / розу; бокале,243,reworked,yes
+287,close,11,4,2,сердце; камня,2372,reworked,yes
+288,close,4,2,2,голубых; хризантем,27,reworked,yes
+289,close,8,2,1,открывается,582,reworked,yes
+290,verbatim,4,2,2,беличья; шкурка,10,reworked,yes
+292,close,4,3,2,старик; похожий,531,reworked,yes
+293,close,6,3,1,голос,3409,reworked,yes
+294,loose,9,1,3,пахли / пахнет; морем; устрицы / устрицами,30,reworked,yes
+295,loose,4,0,1,звенела / звенели,1107,loose,no

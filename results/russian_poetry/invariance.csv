@@ -1,0 +1,17 @@
+arm,variant_a,variant_b,cell,n,R@1_a,R@1_b,R@1_p,R@10_a,R@10_b,R@10_p
+A:encoder,fusedD-MiniLM,fusedD-E5base,verbatim,11,0.636,0.636,1.0,0.909,1.0,1.0
+A:encoder,fusedD-MiniLM,fusedD-E5base,close,31,0.484,0.516,1.0,0.742,0.677,0.5
+A:encoder,fusedD-MiniLM,fusedD-E5base,loose,58,0.121,0.138,1.0,0.362,0.345,1.0
+A:encoder,fusedD-MiniLM,fusedD-E5base,ALL,105,0.286,0.305,0.7266,0.533,0.524,1.0
+B:fusion45,fused4,fused5(+wpair),verbatim,11,0.818,0.727,1.0,0.909,0.909,1.0
+B:fusion45,fused4,fused5(+wpair),close,31,0.484,0.484,1.0,0.645,0.677,1.0
+B:fusion45,fused4,fused5(+wpair),loose,58,0.103,0.121,1.0,0.31,0.362,0.375
+B:fusion45,fused4,fused5(+wpair),ALL,105,0.286,0.286,1.0,0.467,0.514,0.125
+B:fusion5D,fused5,fusedD(+lc),verbatim,11,0.727,0.636,1.0,0.909,0.909,1.0
+B:fusion5D,fused5,fusedD(+lc),close,31,0.484,0.484,1.0,0.677,0.742,0.5
+B:fusion5D,fused5,fusedD(+lc),loose,58,0.121,0.121,1.0,0.362,0.362,1.0
+B:fusion5D,fused5,fusedD(+lc),ALL,105,0.286,0.286,1.0,0.514,0.533,0.5
+C:gram,word-2gram,char-4gram,verbatim,11,0.727,0.273,0.0625,1.0,0.636,0.125
+C:gram,word-2gram,char-4gram,close,31,0.29,0.097,0.0703,0.516,0.194,0.0129
+C:gram,word-2gram,char-4gram,loose,58,0.052,0.034,1.0,0.103,0.052,0.375
+C:gram,word-2gram,char-4gram,ALL,158,0.127,0.057,0.0127,0.222,0.108,0.0005

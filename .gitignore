@@ -1,0 +1,15 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+
+# distributed with the archive deposit, not with git (see README)
+data/poetree/
+cache/
+results/crime_and_punishment/cnp_segments.jsonl
+results/crime_and_punishment/cnp_match_*.jsonl
+results/crime_and_punishment/cnp_dense_top5.jsonl
+results/crime_and_punishment/cnp_fusion_top.jsonl
+results/crime_and_punishment/cnp_rerank_top.jsonl
+results/crime_and_punishment/cnp_connections.jsonl
+results/crime_and_punishment/cnp_apparatus.html

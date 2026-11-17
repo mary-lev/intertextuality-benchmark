@@ -1,0 +1,101 @@
+conn_id,algo_class,reviewer_class,agree,algo_anchor,reviewer_anchor,issue_type,note
+0,close,close,yes,yes,yes,,«смертельно устал» kept; close accepted (could be read as verbatim phrase).
+1,close,close,yes,yes,yes,,
+2,close,loose,no,yes,yes,close_from_long_span,"Only сад + качели shared, scattered over a 20-word ref span; no reworked phrase. Anchor = качели (df 57). Borderline."
+3,close,close,yes,yes,yes,,
+7,close,close,yes,yes,yes,,
+8,loose,close,no,no,yes,loose_missed_frame,Frame kept: «Твой … болезненный и стран-/страст-ный»; run 2 + 1 content word; pronoun/conjunction not counted. Clear error.
+11,loose,verbatim,no,no,yes,one_word_span,One-word span «омут» reproduced whole in «родимый омут»; rule cannot give verbatim for n=1 and df 169 > cap. Definitional/borderline.
+12,loose,loose,yes,no,no,,
+14,verbatim,verbatim,yes,yes,yes,,
+15,verbatim,verbatim,yes,yes,yes,,
+17,close,close,yes,yes,yes,,"«Чужие люди» + заботе / заботам; close accepted, weakish."
+18,loose,loose,yes,no,no,,
+19,close,close,yes,yes,yes,,
+20,close,close,yes,yes,yes,vacuous_match,Class right. «быть / был» is a vacuous match («Быть может» vs «был запружен»); does not change the class (3 others shared).
+21,close,close,yes,yes,yes,,
+23,close,close,yes,yes,no,close_common_words,"Close only via душа + бездна (rarest df 1612), no shared phrase. Class kept (borderline); anchor doubtful."
+24,loose,loose,yes,no,no,,
+27,loose,loose,yes,no,yes,anchor_df_cap,"Loose is right, but «предтечи» (df 129) is the word the reference rests on; just above the 100 cap."
+36,close,close,yes,yes,yes,rhyme_pair,Shared words are the rhyme pair трубы–губы; close accepted on that basis.
+41,loose,close,no,no,yes,missed_derivational,"«Горький хмель» vs «горек и хмелен»: хмель/хмелен missed (lemma хмель vs хмельной, prefix хмель≠хмеле). Clear error."
+43,close,close,yes,yes,yes,,"гигант + скала only; close accepted, borderline."
+44,close,close,yes,yes,yes,missed_match,Class right. Missed летит / полетит (prefixed verb); run broken by румяной / румяною.
+45,close,close,yes,yes,yes,rhyme_pair,Shared words are the rhyme pair акаций–граций; close accepted.
+60,loose,loose,yes,no,no,rhyme_skeleton,"Loose by content words, but rhyme skeleton головы–вы and line frame are parallel; pronoun вы not counted. Kept loose."
+64,verbatim,verbatim,yes,yes,yes,,
+65,close,close,yes,yes,yes,,
+67,loose,close,no,no,yes,missed_homonym_lemma,"«жажду только мира» vs «жаждем только мира»: жажду lemmatised as noun жажда, жаждем as жаждать; prefix жажду≠жажде. Clear error."
+70,loose,loose,yes,no,no,,
+72,close,close,yes,yes,yes,,
+73,close,close,yes,yes,yes,,
+74,close,close,yes,yes,yes,,
+75,close,close,yes,yes,yes,,
+76,loose,verbatim,no,yes,yes,one_word_span,One-word span «Азраил» (proper name) reproduced whole; class loose is an artefact of n=1. Anchor correct.
+78,loose,loose,yes,no,no,,
+80,close,close,yes,yes,yes,,
+81,close,close,yes,yes,yes,,
+85,loose,loose,yes,no,no,,
+87,loose,close,no,no,no,missed_cognate,"«Пью горечь» vs «пьем … горести вино»: горечь/горести cognates, not matched (гореч≠горес). Borderline."
+95,verbatim,verbatim,yes,yes,yes,,Only the pronoun differs (Я / Ты); verbatim accepted.
+96,loose,loose,yes,no,no,,
+116,verbatim,verbatim,yes,yes,yes,,
+125,loose,loose,yes,no,no,,
+133,close,close,yes,yes,yes,,
+135,verbatim,verbatim,yes,yes,yes,,"«волна за волной» whole, думы / дума by lemma; verbatim accepted, borderline close."
+136,close,close,yes,yes,yes,missed_match,Class right. Missed нарисует / рисовала (prefixed verb).
+144,loose,close,no,no,no,synonym_root_rework,"«нельзя же век любить» vs «вечно любить невозможно»: век/вечно (к/ч alternation), нельзя/невозможно. Paraphrase; borderline."
+147,loose,loose,yes,no,no,missed_match,"Loose is right (theme only). Missed кольцо / колечко (кольц≠колеч), while conn 148 matches кольцо / кольца."
+148,loose,loose,yes,no,no,,
+151,close,close,yes,yes,yes,,"Close via run «О Шиллере, о»; correct, proper name carries it."
+152,close,close,yes,yes,yes,rhyme_pair,Long spans; талисман / обман are rhyme words in both; close accepted.
+153,verbatim,verbatim,yes,yes,yes,,"Ref reproduced whole apart from тревожит / тревожить, with «луч мне» inserted; verbatim accepted."
+168,close,close,yes,yes,yes,,
+173,close,verbatim,no,yes,yes,insertion_breaks_run,"Ref «Вдали рассыпанные хаты» is reproduced whole, in order, with «виднеются» inserted; run 2 of 3 fails 85%. Borderline/definitional."
+175,close,close,yes,yes,yes,,
+177,loose,loose,yes,no,no,,
+178,verbatim,verbatim,yes,yes,yes,,
+187,close,close,yes,yes,no,close_vacuous_match,Close is right as a reading (под венцом / на троне … человек) but is produced by copula был/будь + человек (df 6536); no distinctive anchor.
+189,close,close,yes,yes,yes,missed_match,Class right. Missed хранит / сохраняет (prefixed verb).
+193,close,close,yes,yes,yes,missed_match,Class right. Missed следом / следам (следом lemmatised as adverb) and всюду (not a content POS).
+199,loose,loose,yes,no,no,,
+200,close,close,yes,yes,yes,,
+207,close,close,yes,yes,yes,,
+216,loose,close,no,no,no,function_word_frame,"«Пред … ничто» vs «перед тобой — ничто»: frame rests on пред/перед + pronoun ничто, invisible to content-word rule. Borderline."
+221,close,close,yes,yes,yes,,
+257,verbatim,verbatim,yes,yes,yes,,
+258,close,close,yes,yes,yes,,
+259,loose,close,no,no,yes,loose_missed_frame,"«Душа моя с тобою» vs «с тобою // Душа моя»: whole 4-word phrase reordered; two runs of 2, pronouns not counted. Clear error."
+260,close,close,yes,yes,no,close_common_words,"Frame «мало … много» is real, so close is fine, but both words are common adverbs; no searchable anchor."
+261,close,close,yes,yes,yes,,
+262,close,close,yes,yes,yes,,
+263,loose,loose,yes,yes,yes,,
+264,close,close,yes,yes,yes,,
+265,close,close,yes,yes,yes,,
+266,close,close,yes,yes,yes,,
+267,loose,loose,yes,no,no,,
+268,loose,loose,yes,no,no,,
+269,close,close,yes,yes,yes,,
+270,loose,close,no,no,yes,missed_cognate,«дух летит … к Востоку» vs «К востоку я стремлюсь душою»: run «к востоку» + дух/душою not matched. Borderline.
+271,close,close,yes,yes,yes,,
+272,loose,loose,yes,yes,yes,orthography,«На перепутье» / «На перепутьи»: spelling variant breaks the 2-word run; loose + anchor acceptable.
+273,close,close,yes,yes,yes,missed_match,Class right. Missed прежде / прежний (прежд≠прежн).
+275,loose,loose,yes,no,no,,
+276,verbatim,verbatim,yes,yes,yes,,Only first function word differs (То / Как); verbatim accepted.
+277,close,close,yes,yes,yes,compound,«Вечно-Юная» / «Вечно-юной» is one hyphenated epithet counted as two shared words; close is still right.
+279,close,close,yes,yes,yes,near_verbatim,"Near-verbatim (сохраним / сохраню, Но / И); close is defensible, the old band said verbatim."
+280,verbatim,close,no,yes,yes,verbatim_partial,3 of 4 words: «в преддверьи идеала» is shared but the verb differs (Стучусь / Светить). 85% rounds to 3 of 4. Borderline (span-boundary).
+281,verbatim,verbatim,yes,yes,yes,,Only first word differs (Бреду / То); verbatim accepted.
+282,close,close,yes,yes,yes,,
+283,close,close,yes,yes,yes,,Close via run «в этой храмине»; correct.
+284,loose,loose,yes,no,no,,
+285,close,close,yes,yes,yes,,
+286,close,close,yes,yes,yes,,
+287,close,close,yes,yes,yes,,
+288,close,close,yes,yes,yes,,
+289,loose,close,no,no,yes,loose_missed_frame,«всегда открывается книга // В том же» vs «всегда открывается та же … страница»: run 2 + всегда (ADVPRO?) not counted. Clear error.
+290,close,close,yes,yes,yes,near_verbatim,"3 of 4 words identical, one substituted in the middle (распластанная / расстеленная): close is right; cf. 280/292 called verbatim."
+292,verbatim,close,no,yes,yes,verbatim_partial,"Run «старик, похожий на» = 3 of 4, but the pointed word is replaced (барана / Верлэна). Reworking, not a whole quotation. Clear error."
+293,close,close,yes,yes,yes,,Close via run «и голос мой»; correct (незвонок / не громок unmatched).
+294,close,close,yes,yes,yes,,
+295,loose,loose,yes,no,no,,

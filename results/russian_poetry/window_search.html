@@ -1,0 +1,509 @@
+<!doctype html><html lang='ru'><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Window search</title><style>
+body{font:15px/1.45 Georgia,serif;max-width:1100px;margin:2em auto;padding:0 16px;color:#222;background:#fff}
+h1{font-size:1.5em}h2{margin-top:2.2em;border-top:2px solid #999;padding-top:.6em}h3{margin:1.6em 0 .2em}
+h4{margin:1em 0 .2em;font-weight:normal;color:#555}
+pre{font:inherit;background:#f6f4ee;padding:.8em 1em;white-space:pre-wrap}
+table{border-collapse:collapse;width:100%;font-size:.92em}td,th{border-bottom:1px solid #ddd;padding:.3em .5em;
+text-align:left;vertical-align:top}th{color:#555;font-weight:normal}
+.att{background:#e3f1df}.n{color:#777;white-space:nowrap}.note{color:#555;font-size:.95em}
+</style>
+<h1>Window search: what each probe retrieves from earlier poems</h1>
+<p class='note'>Every window of 1, 2 and 4 consecutive lines of the poem is a query. Candidates are corpus poems not dated after the poem. For each probe and window size the five best candidates are shown, with the window that scored best and the candidate's closest line. A green row is a referent the commentary records for this poem. Every other row is unjudged: it may be noise, a commonplace, or a relation no commentator recorded. Scores are comparable only within one table.</p>
+<h2>Только детские книги читать... (1908) <span class='n'>mandl-009</span></h2>
+<pre> 1  Только детские книги читать,
+ 2  Только детские думы лелеять,
+ 3  Все большое далеко развеять,
+ 4  Из глубокой печали восстать.
+ 5  Я от жизни смертельно устал,
+ 6  Ничего от нее не приемлю,
+ 7  Но люблю мою бедную землю,
+ 8  Оттого, что иной не видал.
+ 9  Я качался в далеком саду
+10  На простой деревянной качели,
+11  И высокие темные ели
+12  Вспоминаю в туманном бреду.</pre>
+<p class='note'>Gold relations of this poem with a referent in the corpus: conn 0, conn 1, conn 2.</p>
+<h3>surface (word 2-grams)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я качался в далеком саду <span class='n'>(9)</span></td><td>Bunin I.A., Звезда морей (1906)</td><td>и я качался в искрах звезд</td><td class='n'>0.5022</td></tr>
+<tr class=''><td class='n'>2</td><td>Оттого, что иной не видал. <span class='n'>(8)</span></td><td>Mjatlev I.P., Флоренция. Часть вторая | «Сон мой был весьма спокойный...» (1840)</td><td>не видала к небесам</td><td class='n'>0.4725</td></tr>
+<tr class=''><td class='n'>3</td><td>Оттого, что иной не видал. <span class='n'>(8)</span></td><td>Nekrasov N.A., Княгиня М.Н. Волконская | «Проказники внуки! Сегодня они...» (1872)</td><td>иные бросал не читая</td><td class='n'>0.4664</td></tr>
+<tr class=''><td class='n'>4</td><td>Ничего от нее не приемлю, <span class='n'>(6)</span></td><td>Fet A.A., Две липки (1856)</td><td>я сам учить никак ее не стану</td><td class='n'>0.4269</td></tr>
+<tr class=''><td class='n'>5</td><td>Ничего от нее не приемлю, <span class='n'>(6)</span></td><td>Gippius Z.N., Прямо в рай | «Если хочешь жизни вечной...» (1901)</td><td>от нее не жди ответа</td><td class='n'>0.4269</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(8)</span></td><td>Nekrasov N.A., Княгиня М.Н. Волконская | «Проказники внуки! Сегодня они...» (1872)</td><td>теперь я стара так далеки</td><td class='n'>0.2804</td></tr>
+<tr class=''><td class='n'>2</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(5)</span></td><td>Schepkina-Kupernik T.L., Марьянна Волховская | «Марьянна Львовна Волховская...» (1907)</td><td>порвать я с нею не могу</td><td class='n'>0.2586</td></tr>
+<tr class=''><td class='n'>3</td><td>Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(8)</span></td><td>Bunin I.A., Звезда морей (1906)</td><td>и я качался в искрах звезд</td><td class='n'>0.2521</td></tr>
+<tr class=''><td class='n'>4</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(5)</span></td><td>Fet A.A., Две липки (1856)</td><td>я сам учить никак ее не стану</td><td class='n'>0.2474</td></tr>
+<tr class=''><td class='n'>5</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(5)</span></td><td>Zhukovskij V.A., Наль и Дамаянти | «Жил-был в Индии царь, по имени Наль. Виразены...» (1837)</td><td>эта волшебница нам то ее мы не добрым приветом</td><td class='n'>0.2474</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(6)</span></td><td>Lermontov M.Ju., Сашка: Нравственная поэма (1839)</td><td>я палачу не дам похвальный лист</td><td class='n'>0.1694</td></tr>
+<tr class=''><td class='n'>2</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, / Но люблю мою бедную землю, / Оттого, что иной не видал. <span class='n'>(5)</span></td><td>Zhukovskij V.A., Наль и Дамаянти | «Жил-был в Индии царь, по имени Наль. Виразены...» (1837)</td><td>светлую область мою населять я люблю но напрасно</td><td class='n'>0.1485</td></tr>
+<tr class=''><td class='n'>3</td><td>Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели <span class='n'>(8)</span></td><td>Nekrasov N.A., Княгиня М.Н. Волконская | «Проказники внуки! Сегодня они...» (1872)</td><td>теперь я стара так далеки</td><td class='n'>0.1336</td></tr>
+<tr class=''><td class='n'>4</td><td>Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(3)</span></td><td>Schepkina-Kupernik T.L., Марьянна Волховская | «Марьянна Львовна Волховская...» (1907)</td><td>порвать я с нею не могу</td><td class='n'>0.1202</td></tr>
+<tr class=''><td class='n'>5</td><td>Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели <span class='n'>(8)</span></td><td>Bunin I.A., Звезда морей (1906)</td><td>и я качался в искрах звезд</td><td class='n'>0.1201</td></tr>
+</table>
+<h3>alignment (lemmas)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Я от жизни смертельно устал, <span class='n'>(5)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>9.9764</td></tr>
+<tr class=''><td class='n'>2</td><td>Вспоминаю в туманном бреду. <span class='n'>(12)</span></td><td>Ogarev N.P., Зимний путь (1854)</td><td>туманный бред души больной</td><td class='n'>7.6358</td></tr>
+<tr class=''><td class='n'>3</td><td>Только детские думы лелеять, <span class='n'>(2)</span></td><td>Brjusov V.Ja., L&#x27;ennui de vivre… | «Я жить устал среди людей и в днях...» (1902)</td><td>есть думы тайные и снова в детской дрожи</td><td class='n'>7.2807</td></tr>
+<tr class=''><td class='n'>4</td><td>Только детские книги читать, <span class='n'>(1)</span></td><td>Nadson S.Ja., Женщина (1881)</td><td>и первых детских книг в полуночной тиши</td><td class='n'>6.9481</td></tr>
+<tr class=''><td class='n'>5</td><td>И высокие темные ели <span class='n'>(11)</span></td><td>Berg F.N., Годовщина | «Господи! Вот уж прошли и года -- ...» (1869)</td><td>ель за окошком скрипит</td><td class='n'>6.9123</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, <span class='n'>(4)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>9.9764</td></tr>
+<tr class=''><td class='n'>2</td><td>На простой деревянной качели, / И высокие темные ели <span class='n'>(10)</span></td><td>Kobylinskij L.L., «В этих звуках встают предо мной...» (1904)</td><td>с этим взмахом качелей высоким</td><td class='n'>8.67</td></tr>
+<tr class=''><td class='n'>3</td><td>Я качался в далеком саду / На простой деревянной качели, <span class='n'>(9)</span></td><td>Balmont K.D., Снежинка | «Светло-пушистая...» (1903)</td><td>светло качается</td><td class='n'>7.7291</td></tr>
+<tr class=''><td class='n'>4</td><td>Я качался в далеком саду / На простой деревянной качели, <span class='n'>(9)</span></td><td>Kuzmin M.A., В старые годы | «Подслушанные вздохи о детстве…» (1907)</td><td>и качались на качелях</td><td class='n'>7.7291</td></tr>
+<tr class=''><td class='n'>5</td><td>И высокие темные ели / Вспоминаю в туманном бреду. <span class='n'>(11)</span></td><td>Ogarev N.P., Зимний путь (1854)</td><td>туманный бред души больной</td><td class='n'>7.6358</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Только детские думы лелеять, / Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, <span class='n'>(2)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>9.9764</td></tr>
+<tr class=''><td class='n'>2</td><td>Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели <span class='n'>(8)</span></td><td>Kobylinskij L.L., «В этих звуках встают предо мной...» (1904)</td><td>от земли далеко улететь</td><td class='n'>8.67</td></tr>
+<tr class=''><td class='n'>3</td><td>Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели / Вспоминаю в туманном бреду. <span class='n'>(9)</span></td><td>Balmont K.D., Золотая рыбка | «В замке был веселый бал...» (1903)</td><td>ветерок в саду качал</td><td class='n'>7.964</td></tr>
+<tr class=''><td class='n'>4</td><td>Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, <span class='n'>(7)</span></td><td>Balmont K.D., Снежинка | «Светло-пушистая...» (1903)</td><td>светло качается</td><td class='n'>7.7291</td></tr>
+<tr class=''><td class='n'>5</td><td>Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, <span class='n'>(7)</span></td><td>Kuzmin M.A., В старые годы | «Подслушанные вздохи о детстве…» (1907)</td><td>и качались на качелях</td><td class='n'>7.7291</td></tr>
+</table>
+<h3>bag (BM25)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Но люблю мою бедную землю, <span class='n'>(7)</span></td><td>Merezhkovskij D.S., Ласточки | «Вечером нежным, как твой поцелуй...» (1895)</td><td>бедную гордую душу мою</td><td class='n'>18.6998</td></tr>
+<tr class='att'><td class='n'>2</td><td>Я от жизни смертельно устал, <span class='n'>(5)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>17.7728</td></tr>
+<tr class=''><td class='n'>3</td><td>Я от жизни смертельно устал, <span class='n'>(5)</span></td><td>Bugaev B.N., «Один, один средь гор. Ищу Тебя...» (1902)</td><td>как я устал но даль пылает</td><td class='n'>16.6509</td></tr>
+<tr class='att'><td class='n'>4</td><td>Ничего от нее не приемлю, <span class='n'>(6)</span></td><td>Сологуб, Я люблю мою темную землю... (1896) — attested, conn 1</td><td>ничего не отвергну в созданьи</td><td class='n'>16.0362</td></tr>
+<tr class=''><td class='n'>5</td><td>Но люблю мою бедную землю, <span class='n'>(7)</span></td><td>Brjusov V.Ja., По поводу Chefs d&#x27;oeuvre | «Ты приняла мою книгу с улыбкой...» (1896)</td><td>бедную книгу мою</td><td class='n'>16.0171</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(6)</span></td><td>Сологуб, Я люблю мою темную землю... (1896) — attested, conn 1</td><td>я люблю мою темную землю</td><td class='n'>30.2527</td></tr>
+<tr class=''><td class='n'>2</td><td>На простой деревянной качели, / И высокие темные ели <span class='n'>(10)</span></td><td>Sologub F.K., Чертовы качели | «В тени косматой ели...» (1907)</td><td>над верхом темной ели</td><td class='n'>23.6766</td></tr>
+<tr class=''><td class='n'>3</td><td>Но люблю мою бедную землю, / Оттого, что иной не видал. <span class='n'>(7)</span></td><td>Merezhkovskij D.S., Ласточки | «Вечером нежным, как твой поцелуй...» (1895)</td><td>бедную гордую душу мою</td><td class='n'>19.5823</td></tr>
+<tr class=''><td class='n'>4</td><td>Все большое далеко развеять, / Из глубокой печали восстать. <span class='n'>(3)</span></td><td>Sumarokov A.P., «Ты туфли обругал, а их бояря носят» (1757)</td><td>которая на наш восстать дерзнула сан</td><td class='n'>19.0637</td></tr>
+<tr class=''><td class='n'>5</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(6)</span></td><td>Brjusov V.Ja., Зимняя красота | «Твердят серебряные сени...» (1902)</td><td>но я не внемлю не приемлю</td><td class='n'>18.8999</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(6)</span></td><td>Сологуб, Я люблю мою темную землю... (1896) — attested, conn 1</td><td>я люблю мою темную землю</td><td class='n'>31.4888</td></tr>
+<tr class=''><td class='n'>2</td><td>Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели <span class='n'>(8)</span></td><td>Sologub F.K., Чертовы качели | «В тени косматой ели...» (1907)</td><td>над верхом темной ели</td><td class='n'>25.6535</td></tr>
+<tr class=''><td class='n'>3</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(4)</span></td><td>Rzhevskij A.A., Сонет, сочиненный на рифмы, набранные наперед | «На то ль глаза твои везде меня встречали...» (1761)</td><td>но временем узнал что тщетно я люблю</td><td class='n'>24.9418</td></tr>
+<tr class=''><td class='n'>4</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, / Но люблю мою бедную землю, / Оттого, что иной не видал. <span class='n'>(5)</span></td><td>Merezhkovskij D.S., Ласточки | «Вечером нежным, как твой поцелуй...» (1895)</td><td>бедную гордую душу мою</td><td class='n'>24.7921</td></tr>
+<tr class=''><td class='n'>5</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(4)</span></td><td>Lermontov M.Ju., «Поцелуями прежде считал...» (1832)</td><td>но теперь я от счастья устал</td><td class='n'>23.6081</td></tr>
+</table>
+<h3>collocation</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Только детские думы лелеять, <span class='n'>(2)</span></td><td>Brjusov V.Ja., L&#x27;ennui de vivre… | «Я жить устал среди людей и в днях...» (1902)</td><td>есть думы тайные и снова в детской дрожи</td><td class='n'>17.0668</td></tr>
+<tr class=''><td class='n'>2</td><td>Из глубокой печали восстать. <span class='n'>(4)</span></td><td>Gnedich N.I., Рождение Гомера | «С тех дней, как в Трое жизнь могучего Пелида...» (1816)</td><td>огромный ахиллес из гроба восставал</td><td class='n'>16.7949</td></tr>
+<tr class=''><td class='n'>3</td><td>Только детские книги читать, <span class='n'>(1)</span></td><td>Solovev V.S., Три Свидания | «Заранее над смертью торжествуя...» (1898)</td><td>все что о ней читать я только мог</td><td class='n'>15.588</td></tr>
+<tr class=''><td class='n'>4</td><td>Только детские книги читать, <span class='n'>(1)</span></td><td>Tsvetaeva M.I., Эстеты | «Наши встречи,-- только ими дышим все мы...» (1906)</td><td>для читающих об этом только рифмы</td><td class='n'>14.7857</td></tr>
+<tr class=''><td class='n'>5</td><td>Я качался в далеком саду <span class='n'>(9)</span></td><td>Bunin I.A., В открытом море (1903)</td><td>ты бесконечно далека</td><td class='n'>10.0313</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(6)</span></td><td>Majkov A.N., Эпитафия | «Здесь, в долине скорби, в мирную обитель...» (1841)</td><td>нас земля приемлет</td><td class='n'>24.9698</td></tr>
+<tr class=''><td class='n'>2</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(6)</span></td><td>Grigorev A.A., «В час, когда утомлен бездействием душно-тяжелым...» (1846)</td><td>ласки да встречи плохая расплата не все ли</td><td class='n'>21.8563</td></tr>
+<tr class=''><td class='n'>3</td><td>Я качался в далеком саду / На простой деревянной качели, <span class='n'>(9)</span></td><td>Kuzmin M.A., В старые годы | «Подслушанные вздохи о детстве…» (1907)</td><td>и качались на качелях</td><td class='n'>20.0625</td></tr>
+<tr class=''><td class='n'>4</td><td>Только детские книги читать, / Только детские думы лелеять, <span class='n'>(1)</span></td><td>Brjusov V.Ja., L&#x27;ennui de vivre… | «Я жить устал среди людей и в днях...» (1902)</td><td>а книги чистые источники услады</td><td class='n'>17.0668</td></tr>
+<tr class=''><td class='n'>5</td><td>Все большое далеко развеять, / Из глубокой печали восстать. <span class='n'>(3)</span></td><td>Gnedich N.I., Рождение Гомера | «С тех дней, как в Трое жизнь могучего Пелида...» (1816)</td><td>огромный ахиллес из гроба восставал</td><td class='n'>16.7949</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(4)</span></td><td>Majkov A.N., Эпитафия | «Здесь, в долине скорби, в мирную обитель...» (1841)</td><td>нас земля приемлет</td><td class='n'>24.9698</td></tr>
+<tr class=''><td class='n'>2</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(4)</span></td><td>Grigorev A.A., «В час, когда утомлен бездействием душно-тяжелым...» (1846)</td><td>гордо тихо страдай да живи презрением вволю</td><td class='n'>21.8563</td></tr>
+<tr class=''><td class='n'>3</td><td>Только детские книги читать, / Только детские думы лелеять, / Все большое далеко развеять, / Из глубокой печали восстать. <span class='n'>(1)</span></td><td>Merezhkovskij D.S., Старинные октавы | «Хотел бы я начать без предисловья...» (1895)</td><td>за длинною просекою вдали</td><td class='n'>21.587</td></tr>
+<tr class=''><td class='n'>4</td><td>Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, <span class='n'>(7)</span></td><td>Kuzmin M.A., В старые годы | «Подслушанные вздохи о детстве…» (1907)</td><td>и качались на качелях</td><td class='n'>20.0625</td></tr>
+<tr class=''><td class='n'>5</td><td>Только детские книги читать, / Только детские думы лелеять, / Все большое далеко развеять, / Из глубокой печали восстать. <span class='n'>(1)</span></td><td>Brjusov V.Ja., L&#x27;ennui de vivre… | «Я жить устал среди людей и в днях...» (1902)</td><td>уже в былое цепь уходит далеко</td><td class='n'>17.0668</td></tr>
+</table>
+<h3>dense (E5)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я качался в далеком саду <span class='n'>(9)</span></td><td>Majkov A.N., Сны | «Уж в зелени берез есть ветки золотые...» (1855)</td><td>тихонько убежал я сада в угол дальний</td><td class='n'>0.9042</td></tr>
+<tr class='att'><td class='n'>2</td><td>Я от жизни смертельно устал, <span class='n'>(5)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>0.9031</td></tr>
+<tr class=''><td class='n'>3</td><td>Ничего от нее не приемлю, <span class='n'>(6)</span></td><td>Mjatlev I.P., Франкфурт | «Первой станцией считают...» (1840)</td><td>гроша за нее не дам</td><td class='n'>0.9018</td></tr>
+<tr class=''><td class='n'>4</td><td>Ничего от нее не приемлю, <span class='n'>(6)</span></td><td>Volkov A.G., Мое счастье | «Конечно, удивлю тебя...» (1799)</td><td>о ней ни мало не крушусь</td><td class='n'>0.9016</td></tr>
+<tr class=''><td class='n'>5</td><td>Ничего от нее не приемлю, <span class='n'>(6)</span></td><td>Tumanskij V.I., Примирение | «За прихоть женского тщеславья...» (1833)</td><td>за нею вслед не повлачу</td><td class='n'>0.9009</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(8)</span></td><td>Majkov A.N., Сны | «Уж в зелени берез есть ветки золотые...» (1855)</td><td>тихонько убежал я сада в угол дальний</td><td class='n'>0.9042</td></tr>
+<tr class='att'><td class='n'>2</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, <span class='n'>(4)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>0.9031</td></tr>
+<tr class=''><td class='n'>3</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(5)</span></td><td>Mjatlev I.P., Франкфурт | «Первой станцией считают...» (1840)</td><td>гроша за нее не дам</td><td class='n'>0.9018</td></tr>
+<tr class=''><td class='n'>4</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(5)</span></td><td>Volkov A.G., Мое счастье | «Конечно, удивлю тебя...» (1799)</td><td>о ней ни мало не крушусь</td><td class='n'>0.9016</td></tr>
+<tr class=''><td class='n'>5</td><td>Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(5)</span></td><td>Tumanskij V.I., Примирение | «За прихоть женского тщеславья...» (1833)</td><td>за нею вслед не повлачу</td><td class='n'>0.9009</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(6)</span></td><td>Majkov A.N., Сны | «Уж в зелени берез есть ветки золотые...» (1855)</td><td>тихонько убежал я сада в угол дальний</td><td class='n'>0.9042</td></tr>
+<tr class='att'><td class='n'>2</td><td>Только детские думы лелеять, / Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, <span class='n'>(2)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>0.9031</td></tr>
+<tr class=''><td class='n'>3</td><td>Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(3)</span></td><td>Mjatlev I.P., Франкфурт | «Первой станцией считают...» (1840)</td><td>гроша за нее не дам</td><td class='n'>0.9018</td></tr>
+<tr class=''><td class='n'>4</td><td>Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(3)</span></td><td>Volkov A.G., Мое счастье | «Конечно, удивлю тебя...» (1799)</td><td>о ней ни мало не крушусь</td><td class='n'>0.9016</td></tr>
+<tr class=''><td class='n'>5</td><td>Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, / Ничего от нее не приемлю, <span class='n'>(3)</span></td><td>Tumanskij V.I., Примирение | «За прихоть женского тщеславья...» (1833)</td><td>за нею вслед не повлачу</td><td class='n'>0.9009</td></tr>
+</table>
+<h3>fusion (RRF of the five)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Я от жизни смертельно устал, <span class='n'>(5)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>0.0797</td></tr>
+<tr class=''><td class='n'>2</td><td>Из глубокой печали восстать. <span class='n'>(4)</span></td><td>Fofanov K.M., Всё тает | «Всё тает, всё каплет, всё тает!....» (1894)</td><td>как вздохи глубокой печали</td><td class='n'>0.0645</td></tr>
+<tr class=''><td class='n'>3</td><td>И высокие темные ели <span class='n'>(11)</span></td><td>Nadson S.Ja., «Сейчас только песни звучали...» (1880)</td><td>и там где высокие ели</td><td class='n'>0.0634</td></tr>
+<tr class=''><td class='n'>4</td><td>Из глубокой печали восстать. <span class='n'>(4)</span></td><td>Soloveva P.C., «Помнишь, внизу, разбиваясь о скалы...» (1899)</td><td>столько в нем было глубокой печали</td><td class='n'>0.0627</td></tr>
+<tr class=''><td class='n'>5</td><td>И высокие темные ели <span class='n'>(11)</span></td><td>Bunin I.A., «Еще утро не скоро, не скоро...» (1900)</td><td>влажно зелены темные ели</td><td class='n'>0.0626</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Из глубокой печали восстать. / Я от жизни смертельно устал, <span class='n'>(4)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>0.0789</td></tr>
+<tr class='att'><td class='n'>2</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, <span class='n'>(6)</span></td><td>Сологуб, Я люблю мою темную землю... (1896) — attested, conn 1</td><td>я люблю мою темную землю</td><td class='n'>0.064</td></tr>
+<tr class=''><td class='n'>3</td><td>Я качался в далеком саду / На простой деревянной качели, <span class='n'>(9)</span></td><td>Balmont K.D., Золотая рыбка | «В замке был веселый бал...» (1903)</td><td>ветерок в саду качал</td><td class='n'>0.0625</td></tr>
+<tr class=''><td class='n'>4</td><td>И высокие темные ели / Вспоминаю в туманном бреду. <span class='n'>(11)</span></td><td>Nadson S.Ja., «Сейчас только песни звучали...» (1880)</td><td>и там где высокие ели</td><td class='n'>0.0622</td></tr>
+<tr class=''><td class='n'>5</td><td>Все большое далеко развеять, / Из глубокой печали восстать. <span class='n'>(3)</span></td><td>Fofanov K.M., Всё тает | «Всё тает, всё каплет, всё тает!....» (1894)</td><td>как вздохи глубокой печали</td><td class='n'>0.0613</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Только детские думы лелеять, / Все большое далеко развеять, / Из глубокой печали восстать. / Я от жизни смертельно устал, <span class='n'>(2)</span></td><td>Sologub F.K., «В поле не видно ни зги...» (1897) — attested, conn 0</td><td>сам я смертельно устал</td><td class='n'>0.0755</td></tr>
+<tr class='att'><td class='n'>2</td><td>Ничего от нее не приемлю, / Но люблю мою бедную землю, / Оттого, что иной не видал. / Я качался в далеком саду <span class='n'>(6)</span></td><td>Сологуб, Я люблю мою темную землю... (1896) — attested, conn 1</td><td>я люблю мою темную землю</td><td class='n'>0.0619</td></tr>
+<tr class=''><td class='n'>3</td><td>Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели / Вспоминаю в туманном бреду. <span class='n'>(9)</span></td><td>Nadson S.Ja., «Сейчас только песни звучали...» (1880)</td><td>и там где высокие ели</td><td class='n'>0.0591</td></tr>
+<tr class=''><td class='n'>4</td><td>Оттого, что иной не видал. / Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели <span class='n'>(8)</span></td><td>Balmont K.D., Золотая рыбка | «В замке был веселый бал...» (1903)</td><td>ветерок в саду качал</td><td class='n'>0.0583</td></tr>
+<tr class=''><td class='n'>5</td><td>Я качался в далеком саду / На простой деревянной качели, / И высокие темные ели / Вспоминаю в туманном бреду. <span class='n'>(9)</span></td><td>Smeljakov Ja.V., КРЕМЛЕВСКИЕ ЕЛИ ()</td><td>пусть кремлевские темные ели</td><td class='n'>0.0517</td></tr>
+</table>
+<h2>Encyclica (1914) <span class='n'>mandl-146</span></h2>
+<pre> 1  Есть обитаемая духом
+ 2  Свобода -- избранных удел.
+ 3  Орлиным зреньем, дивным слухом
+ 4  Священник римский уцелел.
+ 5  И голубь не боится грома,
+ 6  Которым церковь говорит;
+ 7  В апостольском созвучьи: Roma! --
+ 8  Он только сердце веселит.
+ 9  Я повторяю это имя
+10  Под вечным куполом небес,
+11  Хоть говоривший мне о Риме
+12  В священном сумраке исчез!</pre>
+<p class='note'>Gold relations of this poem with a referent in the corpus: conn 47, conn 48, conn 49.</p>
+<h3>surface (word 2-grams)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>1.0</td></tr>
+<tr class=''><td class='n'>2</td><td>В священном сумраке исчез! <span class='n'>(12)</span></td><td>Batjushkov K.N., На развалинах замка в Швеции (1814)</td><td>в священном сумраке дубравы</td><td class='n'>0.6225</td></tr>
+<tr class=''><td class='n'>3</td><td>В священном сумраке исчез! <span class='n'>(12)</span></td><td>Batjushkov K.N., Гезиод и Омир -- соперники / «Пройдя из края в край гостеприимный мир...» (1816)</td><td>в священном сумраке в сиянии дианы</td><td class='n'>0.6225</td></tr>
+<tr class=''><td class='n'>4</td><td>Он только сердце веселит. <span class='n'>(8)</span></td><td>Bogdanovich I.F., Стихи к Климене (1763)</td><td>противяся любви он только сердце мучит</td><td class='n'>0.6035</td></tr>
+<tr class=''><td class='n'>5</td><td>Он только сердце веселит. <span class='n'>(8)</span></td><td>Fet A.A., «О помыслах Гафиза...» [из Гафиза] (1859)</td><td>ему он только сердце</td><td class='n'>0.6035</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я повторяю это имя / Под вечным куполом небес, <span class='n'>(9)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.4258</td></tr>
+<tr class=''><td class='n'>2</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Blok A.A., «Мне битва сердце веселит...» (1901)</td><td>он тихо узника поит</td><td class='n'>0.3193</td></tr>
+<tr class=''><td class='n'>3</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Lermontov M.Ju., Измаил-Бей (1832)</td><td>простая сакля веселя их взор</td><td class='n'>0.2348</td></tr>
+<tr class=''><td class='n'>4</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Griboedov A.S., Горе от ума | «Светает!... Ах! как скоро ночь минула!..» (1824)</td><td>я это имя заслужил</td><td class='n'>0.2348</td></tr>
+<tr class=''><td class='n'>5</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Tolstoj A.K., Смерть Иоанна Грозного | «Я государев шурин! Мне невместно...» (1862)</td><td>приял опять</td><td class='n'>0.2348</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, <span class='n'>(7)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.1983</td></tr>
+<tr class=''><td class='n'>2</td><td>Которым церковь говорит; / В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя <span class='n'>(6)</span></td><td>Lermontov M.Ju., Измаил-Бей (1832)</td><td>простая сакля веселя их взор</td><td class='n'>0.1594</td></tr>
+<tr class=''><td class='n'>3</td><td>Которым церковь говорит; / В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя <span class='n'>(6)</span></td><td>Blok A.A., «Мне битва сердце веселит...» (1901)</td><td>он тихо узника поит</td><td class='n'>0.1424</td></tr>
+<tr class=''><td class='n'>4</td><td>Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(8)</span></td><td>Griboedov A.S., Горе от ума | «Светает!... Ах! как скоро ночь минула!..» (1824)</td><td>я это имя заслужил</td><td class='n'>0.1329</td></tr>
+<tr class=''><td class='n'>5</td><td>Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(8)</span></td><td>Tolstoj A.K., Смерть Иоанна Грозного | «Я государев шурин! Мне невместно...» (1862)</td><td>послал же он гарабурду ко мне</td><td class='n'>0.1329</td></tr>
+</table>
+<h3>alignment (lemmas)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>9.6385</td></tr>
+<tr class=''><td class='n'>2</td><td>В апостольском созвучьи: Roma! -- <span class='n'>(7)</span></td><td>Ivanov V.I., «Милый, довольно двух слов от тебя, чтоб опять содрогнулся...» (1913)</td><td>ты dea roma стоишь белая в шлеме с копьем</td><td class='n'>9.115</td></tr>
+<tr class=''><td class='n'>3</td><td>Свобода -- избранных удел. <span class='n'>(2)</span></td><td>Erenburg I.G., Еврейскому народу | «Народ, ведущий род от Авраама...» (1911)</td><td>но недовольный избранным уделом</td><td class='n'>9.0646</td></tr>
+<tr class=''><td class='n'>4</td><td>Есть обитаемая духом <span class='n'>(1)</span></td><td>Sluchevskij K.K., Поп Елисей | «Трудно и тягостно, ох! Уж как тягостно...» (1880)</td><td>духа болезни являют заразу</td><td class='n'>8.5272</td></tr>
+<tr class=''><td class='n'>5</td><td>Есть обитаемая духом <span class='n'>(1)</span></td><td>Zhukovskij V.A., «Лет за пятьсот и поболе случилось, что в ясный, весенний...» (1836)</td><td>духи веселые вод прекрасно и вольно живется</td><td class='n'>8.5272</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я повторяю это имя / Под вечным куполом небес, <span class='n'>(9)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>9.6385</td></tr>
+<tr class=''><td class='n'>2</td><td>Которым церковь говорит; / В апостольском созвучьи: Roma! -- <span class='n'>(6)</span></td><td>Ivanov V.I., «Милый, довольно двух слов от тебя, чтоб опять содрогнулся...» (1913)</td><td>голосом вторить живым нудит он пленный язык</td><td class='n'>9.115</td></tr>
+<tr class=''><td class='n'>3</td><td>Есть обитаемая духом / Свобода -- избранных удел. <span class='n'>(1)</span></td><td>Erenburg I.G., Еврейскому народу | «Народ, ведущий род от Авраама...» (1911)</td><td>лишенный нив средь душных сводов</td><td class='n'>9.0646</td></tr>
+<tr class=''><td class='n'>4</td><td>Священник римский уцелел. / И голубь не боится грома, <span class='n'>(4)</span></td><td>Schepkina-Kupernik T.L., Слово | «Громко всюду слово раздавалось прежде...» (1898)</td><td>труженикам слова пожелаем силы</td><td class='n'>8.7841</td></tr>
+<tr class=''><td class='n'>5</td><td>Есть обитаемая духом / Свобода -- избранных удел. <span class='n'>(1)</span></td><td>Sluchevskij K.K., Поп Елисей | «Трудно и тягостно, ох! Уж как тягостно...» (1880)</td><td>духа болезни являют заразу</td><td class='n'>8.5272</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, <span class='n'>(7)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>9.6385</td></tr>
+<tr class=''><td class='n'>2</td><td>Священник римский уцелел. / И голубь не боится грома, / Которым церковь говорит; / В апостольском созвучьи: Roma! -- <span class='n'>(4)</span></td><td>Ivanov V.I., «Милый, довольно двух слов от тебя, чтоб опять содрогнулся...» (1913)</td><td>дремлют давно не будила нечаянной песнию муза</td><td class='n'>9.115</td></tr>
+<tr class=''><td class='n'>3</td><td>Есть обитаемая духом / Свобода -- избранных удел. / Орлиным зреньем, дивным слухом / Священник римский уцелел. <span class='n'>(1)</span></td><td>Erenburg I.G., Еврейскому народу | «Народ, ведущий род от Авраама...» (1911)</td><td>раскинувшись по плодородным долам</td><td class='n'>9.0646</td></tr>
+<tr class=''><td class='n'>4</td><td>Свобода -- избранных удел. / Орлиным зреньем, дивным слухом / Священник римский уцелел. / И голубь не боится грома, <span class='n'>(2)</span></td><td>Schepkina-Kupernik T.L., Слово | «Громко всюду слово раздавалось прежде...» (1898)</td><td>пожелаем слову вольный лет орла</td><td class='n'>8.7841</td></tr>
+<tr class=''><td class='n'>5</td><td>Есть обитаемая духом / Свобода -- избранных удел. / Орлиным зреньем, дивным слухом / Священник римский уцелел. <span class='n'>(1)</span></td><td>Sluchevskij K.K., Поп Елисей | «Трудно и тягостно, ох! Уж как тягостно...» (1880)</td><td>чудные будто бы струны звенят</td><td class='n'>8.5272</td></tr>
+</table>
+<h3>bag (BM25)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>16.834</td></tr>
+<tr class=''><td class='n'>2</td><td>Орлиным зреньем, дивным слухом <span class='n'>(3)</span></td><td>Scherbina N.F., Письмо | «Я теперь не в Афинах, мой друг...» (1847)</td><td>только слухом живу я да зреньем</td><td class='n'>16.5297</td></tr>
+<tr class=''><td class='n'>3</td><td>Я повторяю это имя <span class='n'>(9)</span></td><td>Annenskij I.F., Среди миров | «Среди миров, в мерцании светил...» (1909)</td><td>одной звезды я повторяю имя</td><td class='n'>16.1052</td></tr>
+<tr class=''><td class='n'>4</td><td>В священном сумраке исчез! <span class='n'>(12)</span></td><td>Brjusov V.Ja., Видение | «В сумраке вечера ты -- неподвижна...» (1908)</td><td>в белом священном венце</td><td class='n'>15.9942</td></tr>
+<tr class=''><td class='n'>5</td><td>Он только сердце веселит. <span class='n'>(8)</span></td><td>Kapnist V.V., Старость и младость | «Хвалят старое вино, --...» (1796)</td><td>правда веселит оно</td><td class='n'>14.9593</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(10)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>19.7611</td></tr>
+<tr class=''><td class='n'>2</td><td>Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(11)</span></td><td>Brjusov V.Ja., Видение | «В сумраке вечера ты -- неподвижна...» (1908)</td><td>медлю ведь если ты послана роком</td><td class='n'>17.9781</td></tr>
+<tr class=''><td class='n'>3</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Blok A.A., «И я любил. И я изведал...» (1908)</td><td>я только странно повторяю</td><td class='n'>16.8125</td></tr>
+<tr class=''><td class='n'>4</td><td>Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(10)</span></td><td>Oznobishin D.P., Северный певец | «Где был наш северный певец?..» (1833)</td><td>под смелым куполом петра</td><td class='n'>16.5916</td></tr>
+<tr class=''><td class='n'>5</td><td>Свобода -- избранных удел. / Орлиным зреньем, дивным слухом <span class='n'>(2)</span></td><td>Scherbina N.F., Письмо | «Я теперь не в Афинах, мой друг...» (1847)</td><td>только слухом живу я да зреньем</td><td class='n'>16.5297</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(9)</span></td><td>Brjusov V.Ja., Видение | «В сумраке вечера ты -- неподвижна...» (1908)</td><td>в белом священном венце</td><td class='n'>22.7601</td></tr>
+<tr class=''><td class='n'>2</td><td>Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(8)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>21.9887</td></tr>
+<tr class=''><td class='n'>3</td><td>Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(9)</span></td><td>Oznobishin D.P., Северный певец | «Где был наш северный певец?..» (1833)</td><td>под смелым куполом петра</td><td class='n'>21.1622</td></tr>
+<tr class=''><td class='n'>4</td><td>Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(8)</span></td><td>Buturlin P.D., Забытье | «Лазурь небес, зеленый бархат нивы...» (1880)</td><td>лазурь небес зеленый бархат нивы</td><td class='n'>19.9678</td></tr>
+<tr class=''><td class='n'>5</td><td>Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме <span class='n'>(8)</span></td><td>Zhemchuzhnikov A.M., «Кончено. Нет ее. Время тревожное...» (1876)</td><td>снова их плача зовет</td><td class='n'>19.66</td></tr>
+</table>
+<h3>collocation</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Орлиным зреньем, дивным слухом <span class='n'>(3)</span></td><td>Annenskij I.F., «О боги!..» (1901)</td><td>чтоб дивными натешились глаза</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>2</td><td>И голубь не боится грома, <span class='n'>(5)</span></td><td>Kuzmin M.A., «Как песня матери...» (1905)</td><td>подобный дальнему грому и голубей воркованью</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>3</td><td>Которым церковь говорит; <span class='n'>(6)</span></td><td>Dmitriev I.I., Чужой толк (1794)</td><td>точь в точь как говорят учены по церквам</td><td class='n'>9.6258</td></tr>
+<tr class=''><td class='n'>4</td><td>Которым церковь говорит; <span class='n'>(6)</span></td><td>Kuzmin M.A., «Опять «прощай», опять иду...» (1908)</td><td>церквей опять увидишь ряд</td><td class='n'>9.6258</td></tr>
+<tr class=''><td class='n'>5</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Majkov A.N., «Полонский! суждено опять судьбою злою...» (1857)</td><td>под небом голубым</td><td class='n'>9.3381</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(11)</span></td><td>Radischev A.N., Песнь историческая (1801)</td><td>я ль еще владыка рима</td><td class='n'>17.8935</td></tr>
+<tr class=''><td class='n'>2</td><td>Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(11)</span></td><td>Fet A.A., «Говорили в древнем Риме...» (1883)</td><td>говорили в древнем риме</td><td class='n'>16.949</td></tr>
+<tr class=''><td class='n'>3</td><td>Есть обитаемая духом / Свобода -- избранных удел. <span class='n'>(1)</span></td><td>Pnin I.P., Ода на правосудие | «Блаженство смертных, царств подпора...» (1805)</td><td>там дух зиждительный свободы</td><td class='n'>16.589</td></tr>
+<tr class=''><td class='n'>4</td><td>И голубь не боится грома, / Которым церковь говорит; <span class='n'>(5)</span></td><td>Panaev V.I., Идиллия XII. Дафнис и Дамет | «Филлида! дождь прошел, ветр стихнул, туч не стало...» (1815)</td><td>на скалы лепится крутые</td><td class='n'>16.3249</td></tr>
+<tr class=''><td class='n'>5</td><td>И голубь не боится грома, / Которым церковь говорит; <span class='n'>(5)</span></td><td>Majkov V.I., Неосновательная боязнь | «Известно, что, когда гремети станет гром...» (1763)</td><td>затем что грому он боится</td><td class='n'>16.3249</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(9)</span></td><td>Radischev A.N., Песнь историческая (1801)</td><td>я ль еще владыка рима</td><td class='n'>17.8935</td></tr>
+<tr class=''><td class='n'>2</td><td>Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(9)</span></td><td>Fet A.A., «Говорили в древнем Риме...» (1883)</td><td>говорили в древнем риме</td><td class='n'>16.949</td></tr>
+<tr class=''><td class='n'>3</td><td>Есть обитаемая духом / Свобода -- избранных удел. / Орлиным зреньем, дивным слухом / Священник римский уцелел. <span class='n'>(1)</span></td><td>Pnin I.P., Ода на правосудие | «Блаженство смертных, царств подпора...» (1805)</td><td>там дух зиждительный свободы</td><td class='n'>16.589</td></tr>
+<tr class=''><td class='n'>4</td><td>Орлиным зреньем, дивным слухом / Священник римский уцелел. / И голубь не боится грома, / Которым церковь говорит; <span class='n'>(3)</span></td><td>Panaev V.I., Идиллия XII. Дафнис и Дамет | «Филлида! дождь прошел, ветр стихнул, туч не стало...» (1815)</td><td>дол снова ревом стад веселым оглашен</td><td class='n'>16.3249</td></tr>
+<tr class=''><td class='n'>5</td><td>Орлиным зреньем, дивным слухом / Священник римский уцелел. / И голубь не боится грома, / Которым церковь говорит; <span class='n'>(3)</span></td><td>Majkov V.I., Неосновательная боязнь | «Известно, что, когда гремети станет гром...» (1763)</td><td>затем что грому он боится</td><td class='n'>16.3249</td></tr>
+</table>
+<h3>dense (E5)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.917</td></tr>
+<tr class=''><td class='n'>2</td><td>Я повторяю это имя <span class='n'>(9)</span></td><td>Turgenev I.S., «Когда давно забытое названье...» (1843)</td><td>я повторю знакомое названье</td><td class='n'>0.9015</td></tr>
+<tr class=''><td class='n'>3</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Glinka F.N., Утро вечера мудренее (1826)</td><td>под круглым куполом небесныя лазури</td><td class='n'>0.8965</td></tr>
+<tr class=''><td class='n'>4</td><td>Я повторяю это имя <span class='n'>(9)</span></td><td>Pushkin A.S., «Там на брегу, где дремлет лес священный...» (1820)</td><td>твое я имя повторял</td><td class='n'>0.8953</td></tr>
+<tr class=''><td class='n'>5</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Vostokov A.H., Парнас, или Гора изящности | «Огнекрылаты кони Феба...» (1801)</td><td>над вечным алтарем курений</td><td class='n'>0.8904</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я повторяю это имя / Под вечным куполом небес, <span class='n'>(9)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.917</td></tr>
+<tr class=''><td class='n'>2</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Turgenev I.S., «Когда давно забытое названье...» (1843)</td><td>я повторю знакомое названье</td><td class='n'>0.9015</td></tr>
+<tr class=''><td class='n'>3</td><td>Я повторяю это имя / Под вечным куполом небес, <span class='n'>(9)</span></td><td>Glinka F.N., Утро вечера мудренее (1826)</td><td>под круглым куполом небесныя лазури</td><td class='n'>0.8965</td></tr>
+<tr class=''><td class='n'>4</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Pushkin A.S., «Там на брегу, где дремлет лес священный...» (1820)</td><td>твое я имя повторял</td><td class='n'>0.8953</td></tr>
+<tr class=''><td class='n'>5</td><td>Я повторяю это имя / Под вечным куполом небес, <span class='n'>(9)</span></td><td>Vostokov A.H., Парнас, или Гора изящности | «Огнекрылаты кони Феба...» (1801)</td><td>над вечным алтарем курений</td><td class='n'>0.8904</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, <span class='n'>(7)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.917</td></tr>
+<tr class=''><td class='n'>2</td><td>Которым церковь говорит; / В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя <span class='n'>(6)</span></td><td>Turgenev I.S., «Когда давно забытое названье...» (1843)</td><td>я повторю знакомое названье</td><td class='n'>0.9015</td></tr>
+<tr class=''><td class='n'>3</td><td>В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, <span class='n'>(7)</span></td><td>Glinka F.N., Утро вечера мудренее (1826)</td><td>под круглым куполом небесныя лазури</td><td class='n'>0.8965</td></tr>
+<tr class=''><td class='n'>4</td><td>Которым церковь говорит; / В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя <span class='n'>(6)</span></td><td>Pushkin A.S., «Там на брегу, где дремлет лес священный...» (1820)</td><td>твое я имя повторял</td><td class='n'>0.8953</td></tr>
+<tr class=''><td class='n'>5</td><td>В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, <span class='n'>(7)</span></td><td>Vostokov A.H., Парнас, или Гора изящности | «Огнекрылаты кони Феба...» (1801)</td><td>над вечным алтарем курений</td><td class='n'>0.8904</td></tr>
+</table>
+<h3>fusion (RRF of the five)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Под вечным куполом небес, <span class='n'>(10)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.0817</td></tr>
+<tr class=''><td class='n'>2</td><td>Я повторяю это имя <span class='n'>(9)</span></td><td>Annenskij I.F., Среди миров | «Среди миров, в мерцании светил...» (1909)</td><td>одной звезды я повторяю имя</td><td class='n'>0.0795</td></tr>
+<tr class=''><td class='n'>3</td><td>В священном сумраке исчез! <span class='n'>(12)</span></td><td>Ldov K.N., Последний день | «И вот последний день затмился сиротливо...» (1895)</td><td>последний вспыхнул луч и в сумраке исчез</td><td class='n'>0.0625</td></tr>
+<tr class=''><td class='n'>4</td><td>И голубь не боится грома, <span class='n'>(5)</span></td><td>Knjazhnin Ja.B., Рыбак (1778)</td><td>боится рыбака как черт боится грома</td><td class='n'>0.0619</td></tr>
+<tr class=''><td class='n'>5</td><td>В священном сумраке исчез! <span class='n'>(12)</span></td><td>Batjushkov K.N., На развалинах замка в Швеции (1814)</td><td>в священном сумраке дубравы</td><td class='n'>0.0598</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Я повторяю это имя / Под вечным куполом небес, <span class='n'>(9)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.0812</td></tr>
+<tr class=''><td class='n'>2</td><td>Он только сердце веселит. / Я повторяю это имя <span class='n'>(8)</span></td><td>Annenskij I.F., Среди миров | «Среди миров, в мерцании светил...» (1909)</td><td>одной звезды я повторяю имя</td><td class='n'>0.0722</td></tr>
+<tr class=''><td class='n'>3</td><td>И голубь не боится грома, / Которым церковь говорит; <span class='n'>(5)</span></td><td>Knjazhnin Ja.B., Рыбак (1778)</td><td>боится рыбака как черт боится грома</td><td class='n'>0.057</td></tr>
+<tr class=''><td class='n'>4</td><td>Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(11)</span></td><td>Ldov K.N., Последний день | «И вот последний день затмился сиротливо...» (1895)</td><td>последний вспыхнул луч и в сумраке исчез</td><td class='n'>0.0567</td></tr>
+<tr class=''><td class='n'>5</td><td>И голубь не боится грома, / Которым церковь говорит; <span class='n'>(5)</span></td><td>Hvostov D.I., Два голубя (1802)</td><td>хоть камень голубя не сшиб</td><td class='n'>0.0538</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя / Под вечным куполом небес, <span class='n'>(7)</span></td><td>Merezhkovskij D.S., Сон | «Мне снилось -- от резни чудовищного боя...» (1884)</td><td>под вечным куполом небес</td><td class='n'>0.0803</td></tr>
+<tr class=''><td class='n'>2</td><td>Которым церковь говорит; / В апостольском созвучьи: Roma! -- / Он только сердце веселит. / Я повторяю это имя <span class='n'>(6)</span></td><td>Annenskij I.F., Среди миров | «Среди миров, в мерцании светил...» (1909)</td><td>одной звезды я повторяю имя</td><td class='n'>0.0694</td></tr>
+<tr class=''><td class='n'>3</td><td>Я повторяю это имя / Под вечным куполом небес, / Хоть говоривший мне о Риме / В священном сумраке исчез! <span class='n'>(9)</span></td><td>Ldov K.N., Последний день | «И вот последний день затмился сиротливо...» (1895)</td><td>и над обломками былого мирозданья</td><td class='n'>0.0528</td></tr>
+<tr class=''><td class='n'>4</td><td>И голубь не боится грома, / Которым церковь говорит; / В апостольском созвучьи: Roma! -- / Он только сердце веселит. <span class='n'>(5)</span></td><td>Knjazhnin Ja.B., Рыбак (1778)</td><td>боится рыбака как черт боится грома</td><td class='n'>0.0497</td></tr>
+<tr class=''><td class='n'>5</td><td>Орлиным зреньем, дивным слухом / Священник римский уцелел. / И голубь не боится грома, / Которым церковь говорит; <span class='n'>(3)</span></td><td>Hvostov D.I., Два голубя (1802)</td><td>хоть камень голубя не сшиб</td><td class='n'>0.0451</td></tr>
+</table>
+<h2>Ветер нам утешенье принес... (1922) <span class='n'>mandl-256</span></h2>
+<pre> 1  Ветер нам утешенье принес,
+ 2  И в лазури почуяли мы
+ 3  Ассирийские крылья стрекоз,
+ 4  Переборы коленчатой тьмы.
+ 5  И военной грозой потемнел
+ 6  Нижний слой помраченных небес,
+ 7  Шестируких летающих тел
+ 8  Слюдяной перепончатый лес.
+ 9  Есть в лазури слепой уголок,
+10  И в блаженные полдни всегда,
+11  Как сгустившейся ночи намек,
+12  Роковая трепещет звезда.
+13  И, с трудом пробиваясь вперед,
+14  В чешуе искалеченных крыл
+15  Под высокую руку берет
+16  Побежденную твердь Азраил.</pre>
+<p class='note'>Gold relations of this poem with a referent in the corpus: conn 75, conn 76, conn 78.</p>
+<h3>surface (word 2-grams)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Есть в лазури слепой уголок, <span class='n'>(9)</span></td><td>Merezhkovskij D.S., Старинные октавы | «Хотел бы я начать без предисловья...» (1895)</td><td>в лазури цвет платков их желтых ярок</td><td class='n'>0.3277</td></tr>
+<tr class=''><td class='n'>2</td><td>И в блаженные полдни всегда, <span class='n'>(10)</span></td><td>Fet A.A., Сабина (1858)</td><td>несет с покорною душою</td><td class='n'>0.3254</td></tr>
+<tr class=''><td class='n'>3</td><td>И в блаженные полдни всегда, <span class='n'>(10)</span></td><td>Majkov A.N., Княжна | «Давно ль, давно ль, на траурных конях...» (1874)</td><td>служила панихиды все как надо</td><td class='n'>0.3254</td></tr>
+<tr class=''><td class='n'>4</td><td>И в блаженные полдни всегда, <span class='n'>(10)</span></td><td>Ivanov V.I., Гимн IV | «Ведаю ныне, когда и последнее утро настанет...» (1909)</td><td>к страде и злобе дней</td><td class='n'>0.3254</td></tr>
+<tr class=''><td class='n'>5</td><td>И в блаженные полдни всегда, <span class='n'>(10)</span></td><td>Vjazemskij P.A., Александрийский стих (1853)</td><td>в златой поэтов век в блаженные года</td><td class='n'>0.3254</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(12)</span></td><td>Solovev S.M., Послание епископу Трифону | «Сказав «прости» культурным негам...» (1918)</td><td>недугом гложущим томясь</td><td class='n'>0.2542</td></tr>
+<tr class=''><td class='n'>2</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл <span class='n'>(13)</span></td><td>Ogarev N.P., Матвей Радаев (1856)</td><td>вперед склонясь едва заметно</td><td class='n'>0.2313</td></tr>
+<tr class=''><td class='n'>3</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы <span class='n'>(1)</span></td><td>Merezhkovskij D.S., Вера | «Недавно рецензент довольно жёлчный...» (1890)</td><td>в лазури тополь листьями звенел</td><td class='n'>0.2235</td></tr>
+<tr class=''><td class='n'>4</td><td>Есть в лазури слепой уголок, / И в блаженные полдни всегда, <span class='n'>(9)</span></td><td>Vjazemskij P.A., Александрийский стих (1853)</td><td>в златой поэтов век в блаженные года</td><td class='n'>0.2132</td></tr>
+<tr class=''><td class='n'>5</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл <span class='n'>(13)</span></td><td>Pushkin A.S., Сказка о царе Салтане, о сыне его славном и могучем богатыре князе Гвидоне Салтановиче и о прекрасной царевне Лебеди (1831)</td><td>и дозором обходить</td><td class='n'>0.1761</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>И в блаженные полдни всегда, / Как сгустившейся ночи намек, / Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(10)</span></td><td>Solovev S.M., Послание епископу Трифону | «Сказав «прости» культурным негам...» (1918)</td><td>недугом гложущим томясь</td><td class='n'>0.1172</td></tr>
+<tr class=''><td class='n'>2</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет <span class='n'>(12)</span></td><td>Ogarev N.P., Матвей Радаев (1856)</td><td>вперед склонясь едва заметно</td><td class='n'>0.115</td></tr>
+<tr class=''><td class='n'>3</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Merezhkovskij D.S., Вера | «Недавно рецензент довольно жёлчный...» (1890)</td><td>в лазури тополь листьями звенел</td><td class='n'>0.1125</td></tr>
+<tr class=''><td class='n'>4</td><td>Шестируких летающих тел / Слюдяной перепончатый лес. / Есть в лазури слепой уголок, / И в блаженные полдни всегда, <span class='n'>(7)</span></td><td>Vjazemskij P.A., Александрийский стих (1853)</td><td>в златой поэтов век в блаженные года</td><td class='n'>0.1122</td></tr>
+<tr class=''><td class='n'>5</td><td>И в блаженные полдни всегда, / Как сгустившейся ночи намек, / Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(10)</span></td><td>Tolstoj A.K., Иоанн Дамаскин/Тропарь (1858)</td><td>господь в блаженные селенья</td><td class='n'>0.1027</td></tr>
+</table>
+<h3>alignment (lemmas)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Нижний слой помраченных небес, <span class='n'>(6)</span></td><td>Tjutchev F.I., Гус на костре (1870)</td><td>лишь слышен легкий треск и в нижнем слое</td><td class='n'>12.4547</td></tr>
+<tr class=''><td class='n'>2</td><td>Слюдяной перепончатый лес. <span class='n'>(8)</span></td><td>Merkureva V.A., Об Антихристе | «Без поры, не ко времени…» (1918)</td><td>леса дремучие дубом ивою</td><td class='n'>8.4218</td></tr>
+<tr class=''><td class='n'>3</td><td>И, с трудом пробиваясь вперед, <span class='n'>(13)</span></td><td>Kuzmin M.A., «Я белым камнем этот день отмечу...» (1904)</td><td>и озирая пестрые ступени</td><td class='n'>8.1134</td></tr>
+<tr class=''><td class='n'>4</td><td>Ассирийские крылья стрекоз, <span class='n'>(3)</span></td><td>Gumilev N.S., Ночь | «Пролетала золотая ночь...» (1917)</td><td>словно крылья пламенных стрекоз</td><td class='n'>8.0397</td></tr>
+<tr class=''><td class='n'>5</td><td>Ассирийские крылья стрекоз, <span class='n'>(3)</span></td><td>Gumilev N.S., «Рядами тянутся колонны...» (1918)</td><td>с крылами словно стрекоза</td><td class='n'>8.0397</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>И военной грозой потемнел / Нижний слой помраченных небес, <span class='n'>(5)</span></td><td>Tjutchev F.I., Гус на костре (1870)</td><td>костра огонь предательски сквозит</td><td class='n'>12.4547</td></tr>
+<tr class=''><td class='n'>2</td><td>Шестируких летающих тел / Слюдяной перепончатый лес. <span class='n'>(7)</span></td><td>Wagenheim K.K., «До белых барханов твоих...» (1919)</td><td>раскосо славянской руси</td><td class='n'>10.7285</td></tr>
+<tr class=''><td class='n'>3</td><td>Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(15)</span></td><td>Majkov A.N., Пери и Азраил | «Останови свой меч горящий...» (1841)</td><td>кидает мрамор горны недры</td><td class='n'>10.253</td></tr>
+<tr class=''><td class='n'>4</td><td>Переборы коленчатой тьмы. / И военной грозой потемнел <span class='n'>(4)</span></td><td>Nikitin I.S., Буря | «Тучи идут разноцветной грядою по синему небу...» (1854)</td><td>кротким серебряным светом осыпал он бора вершину</td><td class='n'>9.3381</td></tr>
+<tr class=''><td class='n'>5</td><td>Шестируких летающих тел / Слюдяной перепончатый лес. <span class='n'>(7)</span></td><td>Merkureva V.A., Об Антихристе | «Без поры, не ко времени…» (1918)</td><td>леса дремучие дубом ивою</td><td class='n'>8.4218</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. / И военной грозой потемнел / Нижний слой помраченных небес, <span class='n'>(3)</span></td><td>Tjutchev F.I., Гус на костре (1870)</td><td>костра огонь предательски сквозит</td><td class='n'>12.4547</td></tr>
+<tr class=''><td class='n'>2</td><td>И военной грозой потемнел / Нижний слой помраченных небес, / Шестируких летающих тел / Слюдяной перепончатый лес. <span class='n'>(5)</span></td><td>Wagenheim K.K., «До белых барханов твоих...» (1919)</td><td>и страшен у белых колонн</td><td class='n'>10.7285</td></tr>
+<tr class=''><td class='n'>3</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(13)</span></td><td>Majkov A.N., Пери и Азраил | «Останови свой меч горящий...» (1841)</td><td>и скиптр с венцом себе кует</td><td class='n'>10.253</td></tr>
+<tr class=''><td class='n'>4</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Gippius Z.N., Она | «В своей бессовестной и жалкой низости...» (1905)</td><td>ее коленчатая чешуя</td><td class='n'>9.3381</td></tr>
+<tr class=''><td class='n'>5</td><td>И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. / И военной грозой потемнел <span class='n'>(2)</span></td><td>Nikitin I.S., Буря | «Тучи идут разноцветной грядою по синему небу...» (1854)</td><td>кротким серебряным светом осыпал он бора вершину</td><td class='n'>9.3381</td></tr>
+</table>
+<h3>bag (BM25)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>И военной грозой потемнел <span class='n'>(5)</span></td><td>Lermontov M.Ju., Два великана (1832)</td><td>и пришел с грозой военной</td><td class='n'>14.4779</td></tr>
+<tr class=''><td class='n'>2</td><td>Как сгустившейся ночи намек, <span class='n'>(11)</span></td><td>Solovev S.M., Июльский вечер | «Изгородь...» (1906)</td><td>запад как мутной сгустившейся кровью</td><td class='n'>14.4228</td></tr>
+<tr class=''><td class='n'>3</td><td>И, с трудом пробиваясь вперед, <span class='n'>(13)</span></td><td>Drozhzhin S.T., На пути | «Измучены нуждой, подавлены трудом...» (1878)</td><td>и терн колючий нас мучительно язвит</td><td class='n'>14.3051</td></tr>
+<tr class='att'><td class='n'>4</td><td>Ветер нам утешенье принес, <span class='n'>(1)</span></td><td>Blok A.A., «Ветер принес издалёка...» (1901) — attested, conn 75</td><td>ветер принес издалека</td><td class='n'>14.2912</td></tr>
+<tr class=''><td class='n'>5</td><td>И, с трудом пробиваясь вперед, <span class='n'>(13)</span></td><td>Drozhzhin S.T., «Я не гнул спины дугою...» (1887)</td><td>шел вперед сквозь тину зла</td><td class='n'>14.2515</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы <span class='n'>(1)</span></td><td>Blok A.A., «Ветер принес издалёка...» (1901) — attested, conn 75</td><td>ветер принес издалека</td><td class='n'>21.5077</td></tr>
+<tr class=''><td class='n'>2</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(12)</span></td><td>Ivanov G.V., «Я не пойду искать изменчивой судьбы...» (1921)</td><td>далекая звезда трепещет и пылает</td><td class='n'>16.4671</td></tr>
+<tr class=''><td class='n'>3</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы <span class='n'>(1)</span></td><td>Lohvitskaja M., Дети лазури | «Колеблются ветви дыханием бури...» (1896)</td><td>мы тонем в лазури безбрежного дня</td><td class='n'>15.7772</td></tr>
+<tr class=''><td class='n'>4</td><td>Как сгустившейся ночи намек, / Роковая трепещет звезда. <span class='n'>(11)</span></td><td>Kuzmin M.A., Картонный домик | «Мой друг уехал без прощанья…» (1906)</td><td>милый подарок ты намек или предсказанье</td><td class='n'>15.095</td></tr>
+<tr class=''><td class='n'>5</td><td>И в лазури почуяли мы / Ассирийские крылья стрекоз, <span class='n'>(2)</span></td><td>Brjusov V.Ja., «В тихом блеске дремлет леска...» (1918)</td><td>взлет стрекоз и ярких мух</td><td class='n'>14.9462</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class='att'><td class='n'>1</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Blok A.A., «Ветер принес издалёка...» (1901) — attested, conn 75</td><td>ветер принес издалека</td><td class='n'>21.5077</td></tr>
+<tr class='att'><td class='n'>2</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(13)</span></td><td>Blok A.A., «Милый друг, и в этом тихом доме...» (1913) — attested, conn 76</td><td>ангел бури азраил</td><td class='n'>19.2509</td></tr>
+<tr class=''><td class='n'>3</td><td>И в блаженные полдни всегда, / Как сгустившейся ночи намек, / Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(10)</span></td><td>Bahturin K.A., Насильный брак | «Я видел страшный твой обряд...» (1836)</td><td>как бы скучая под венцом</td><td class='n'>18.9966</td></tr>
+<tr class=''><td class='n'>4</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Brjusov V.Ja., «В тихом блеске дремлет леска...» (1918)</td><td>ветра сладостен размах</td><td class='n'>18.5432</td></tr>
+<tr class=''><td class='n'>5</td><td>Нижний слой помраченных небес, / Шестируких летающих тел / Слюдяной перепончатый лес. / Есть в лазури слепой уголок, <span class='n'>(6)</span></td><td>Merezhkovskij D.S., Развенчанный лес | «Как царь развенчанный стоит могучий лес...» (1893)</td><td>как царь развенчанный стоит могучий лес</td><td class='n'>18.4156</td></tr>
+</table>
+<h3>collocation</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Побежденную твердь Азраил. <span class='n'>(16)</span></td><td>Bugaev B.N., «На башнях дальних облаков...» (1903)</td><td>столбы червонные берилла</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>2</td><td>Нижний слой помраченных небес, <span class='n'>(6)</span></td><td>Tjutchev F.I., Гус на костре (1870)</td><td>лишь слышен легкий треск и в нижнем слое</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>3</td><td>И военной грозой потемнел <span class='n'>(5)</span></td><td>Ershov P.P., Сибирский казак (1834)</td><td>и раздул он фитиль догорелый</td><td class='n'>9.6258</td></tr>
+<tr class=''><td class='n'>4</td><td>Шестируких летающих тел <span class='n'>(7)</span></td><td>Heraskov M.M., Россиада. Поэма эпическая. (1771)</td><td>как молния ряды смешенны прелетает</td><td class='n'>9.6258</td></tr>
+<tr class=''><td class='n'>5</td><td>И, с трудом пробиваясь вперед, <span class='n'>(13)</span></td><td>Jakubovich P.F., Сон | «Земледелец грубо мне сказал во сне...» (1880)</td><td>каменщик туда же этакий нахал</td><td class='n'>9.6258</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Шестируких летающих тел / Слюдяной перепончатый лес. <span class='n'>(7)</span></td><td>Wagenheim K.K., «До белых барханов твоих...» (1919)</td><td>раскосо славянской руси</td><td class='n'>20.0625</td></tr>
+<tr class=''><td class='n'>2</td><td>Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(15)</span></td><td>Bugaev B.N., «На башнях дальних облаков...» (1903)</td><td>челнок качался золотистый</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>3</td><td>Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(15)</span></td><td>Bugaev B.N., Прохождение | «Я фонарь...» (1906)</td><td>нерассветная твердь</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>4</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(12)</span></td><td>Hemnitser I.I., Стихи, писанные в письме к Николаю Александровичу Львову в Москву 1775 года апреля 3 (1775)</td><td>и так от строгой распри сей</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>5</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(12)</span></td><td>Majkov A.N., «Белые лебеди, вестники светлой Весны, пролетели...» (1891)</td><td>белые лебеди вестники светлой весны пролетели</td><td class='n'>10.0313</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>И военной грозой потемнел / Нижний слой помраченных небес, / Шестируких летающих тел / Слюдяной перепончатый лес. <span class='n'>(5)</span></td><td>Wagenheim K.K., «До белых барханов твоих...» (1919)</td><td>и страшен у белых колонн</td><td class='n'>20.0625</td></tr>
+<tr class=''><td class='n'>2</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(13)</span></td><td>Balmont K.D., Пять пещер | «Бледны и томительны все сны земного Сна...» (1902)</td><td>быстро мы касаемся для нас доступных сфер</td><td class='n'>18.4043</td></tr>
+<tr class=''><td class='n'>3</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет <span class='n'>(12)</span></td><td>Kozlov I.I., Абидосская невеста (1826)</td><td>пускаясь в буйные налеты</td><td class='n'>17.9523</td></tr>
+<tr class=''><td class='n'>4</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(13)</span></td><td>Bugaev B.N., «На башнях дальних облаков...» (1903)</td><td>помчался челн и за собой</td><td class='n'>10.0313</td></tr>
+<tr class=''><td class='n'>5</td><td>И, с трудом пробиваясь вперед, / В чешуе искалеченных крыл / Под высокую руку берет / Побежденную твердь Азраил. <span class='n'>(13)</span></td><td>Bugaev B.N., Прохождение | «Я фонарь...» (1906)</td><td>прикасаясь к разодранным ризам</td><td class='n'>10.0313</td></tr>
+</table>
+<h3>dense (E5)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>И военной грозой потемнел <span class='n'>(5)</span></td><td>Fet A.A., Саконтала | «Саконтала, из всех цариц, украшавших индийский...» (1847)</td><td>и военная буря неслася грозным потоком</td><td class='n'>0.9008</td></tr>
+<tr class=''><td class='n'>2</td><td>Ветер нам утешенье принес, <span class='n'>(1)</span></td><td>Bugaev B.N., «Для пророка, отца своего...» (1903)</td><td>ветерок нам принес</td><td class='n'>0.8978</td></tr>
+<tr class=''><td class='n'>3</td><td>И, с трудом пробиваясь вперед, <span class='n'>(13)</span></td><td>Pushkin A.S., Евгений Онегин / Глава третья (1824)</td><td>и выражалася с трудом</td><td class='n'>0.8911</td></tr>
+<tr class=''><td class='n'>4</td><td>И военной грозой потемнел <span class='n'>(5)</span></td><td>Muravev M.N., К И.Ф. Богдановичу | «Любезный человек и живописец граций...» (1782)</td><td>и уклонялся военныя брони</td><td class='n'>0.8911</td></tr>
+<tr class=''><td class='n'>5</td><td>Ветер нам утешенье принес, <span class='n'>(1)</span></td><td>Mihajlov M.L., «Долиной пышной шли мы рядом...» (1862)</td><td>к нам ветер доносил</td><td class='n'>0.8894</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Переборы коленчатой тьмы. / И военной грозой потемнел <span class='n'>(4)</span></td><td>Fet A.A., Саконтала | «Саконтала, из всех цариц, украшавших индийский...» (1847)</td><td>и военная буря неслася грозным потоком</td><td class='n'>0.9008</td></tr>
+<tr class=''><td class='n'>2</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы <span class='n'>(1)</span></td><td>Bugaev B.N., «Для пророка, отца своего...» (1903)</td><td>ветерок нам принес</td><td class='n'>0.8978</td></tr>
+<tr class=''><td class='n'>3</td><td>Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(12)</span></td><td>Pushkin A.S., Евгений Онегин / Глава третья (1824)</td><td>и выражалася с трудом</td><td class='n'>0.8911</td></tr>
+<tr class=''><td class='n'>4</td><td>Переборы коленчатой тьмы. / И военной грозой потемнел <span class='n'>(4)</span></td><td>Muravev M.N., К И.Ф. Богдановичу | «Любезный человек и живописец граций...» (1782)</td><td>и уклонялся военныя брони</td><td class='n'>0.8911</td></tr>
+<tr class=''><td class='n'>5</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы <span class='n'>(1)</span></td><td>Mihajlov M.L., «Долиной пышной шли мы рядом...» (1862)</td><td>к нам ветер доносил</td><td class='n'>0.8894</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. / И военной грозой потемнел <span class='n'>(2)</span></td><td>Fet A.A., Саконтала | «Саконтала, из всех цариц, украшавших индийский...» (1847)</td><td>и военная буря неслася грозным потоком</td><td class='n'>0.9008</td></tr>
+<tr class=''><td class='n'>2</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Bugaev B.N., «Для пророка, отца своего...» (1903)</td><td>ветерок нам принес</td><td class='n'>0.8978</td></tr>
+<tr class=''><td class='n'>3</td><td>И в блаженные полдни всегда, / Как сгустившейся ночи намек, / Роковая трепещет звезда. / И, с трудом пробиваясь вперед, <span class='n'>(10)</span></td><td>Pushkin A.S., Евгений Онегин / Глава третья (1824)</td><td>и выражалася с трудом</td><td class='n'>0.8911</td></tr>
+<tr class=''><td class='n'>4</td><td>И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. / И военной грозой потемнел <span class='n'>(2)</span></td><td>Muravev M.N., К И.Ф. Богдановичу | «Любезный человек и живописец граций...» (1782)</td><td>и уклонялся военныя брони</td><td class='n'>0.8911</td></tr>
+<tr class=''><td class='n'>5</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Mihajlov M.L., «Долиной пышной шли мы рядом...» (1862)</td><td>к нам ветер доносил</td><td class='n'>0.8894</td></tr>
+</table>
+<h3>fusion (RRF of the five)</h3>
+<h4>windows of 1 line</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Ассирийские крылья стрекоз, <span class='n'>(3)</span></td><td>Gumilev N.S., Ночь | «Пролетала золотая ночь...» (1917)</td><td>словно крылья пламенных стрекоз</td><td class='n'>0.0645</td></tr>
+<tr class=''><td class='n'>2</td><td>И военной грозой потемнел <span class='n'>(5)</span></td><td>Lermontov M.Ju., Два великана (1832)</td><td>и пришел с грозой военной</td><td class='n'>0.0561</td></tr>
+<tr class=''><td class='n'>3</td><td>И военной грозой потемнел <span class='n'>(5)</span></td><td>Davydov D.V., Ответ (1830)</td><td>пусть грянет русь военною грозой</td><td class='n'>0.0547</td></tr>
+<tr class=''><td class='n'>4</td><td>Ассирийские крылья стрекоз, <span class='n'>(3)</span></td><td>Gumilev N.S., «Рядами тянутся колонны...» (1918)</td><td>с крылами словно стрекоза</td><td class='n'>0.0481</td></tr>
+<tr class=''><td class='n'>5</td><td>Ассирийские крылья стрекоз, <span class='n'>(3)</span></td><td>Ivanov V.I., Химеры | «Над сумраком пурпурных див...» (1911)</td><td>и крылья сквозят стрекозы</td><td class='n'>0.0462</td></tr>
+</table>
+<h4>windows of 2 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(3)</span></td><td>Gumilev N.S., Ночь | «Пролетала золотая ночь...» (1917)</td><td>словно крылья пламенных стрекоз</td><td class='n'>0.0635</td></tr>
+<tr class=''><td class='n'>2</td><td>И в лазури почуяли мы / Ассирийские крылья стрекоз, <span class='n'>(2)</span></td><td>Zenkevich M.A., «Жарким криком почуяв средь сна...» (1918)</td><td>и в лазури плескаясь прославит</td><td class='n'>0.058</td></tr>
+<tr class=''><td class='n'>3</td><td>Есть в лазури слепой уголок, / И в блаженные полдни всегда, <span class='n'>(9)</span></td><td>Ahmatova A.A., Подражание И.Ф. Анненскому | «И с тобой, моей первой причудой...» (1911)</td><td>мил сегодня а завтра далек</td><td class='n'>0.0562</td></tr>
+<tr class=''><td class='n'>4</td><td>И военной грозой потемнел / Нижний слой помраченных небес, <span class='n'>(5)</span></td><td>Lermontov M.Ju., Два великана (1832)</td><td>и пришел с грозой военной</td><td class='n'>0.0534</td></tr>
+<tr class=''><td class='n'>5</td><td>И военной грозой потемнел / Нижний слой помраченных небес, <span class='n'>(5)</span></td><td>Davydov D.V., Ответ (1830)</td><td>пусть грянет русь военною грозой</td><td class='n'>0.0519</td></tr>
+</table>
+<h4>windows of 4 lines</h4>
+<table><tr><th>#</th><th>window (line)</th><th>candidate</th><th>closest line</th><th>score</th></tr>
+<tr class=''><td class='n'>1</td><td>Шестируких летающих тел / Слюдяной перепончатый лес. / Есть в лазури слепой уголок, / И в блаженные полдни всегда, <span class='n'>(7)</span></td><td>Ahmatova A.A., Подражание И.Ф. Анненскому | «И с тобой, моей первой причудой...» (1911)</td><td>мил сегодня а завтра далек</td><td class='n'>0.0509</td></tr>
+<tr class=''><td class='n'>2</td><td>Есть в лазури слепой уголок, / И в блаженные полдни всегда, / Как сгустившейся ночи намек, / Роковая трепещет звезда. <span class='n'>(9)</span></td><td>Merezhkovskij D.S., Старинные октавы | «Хотел бы я начать без предисловья...» (1895)</td><td>с кощунством вечным вечная святыня</td><td class='n'>0.0449</td></tr>
+<tr class=''><td class='n'>3</td><td>И военной грозой потемнел / Нижний слой помраченных небес, / Шестируких летающих тел / Слюдяной перепончатый лес. <span class='n'>(5)</span></td><td>Lermontov M.Ju., Два великана (1832)</td><td>и пришел с грозой военной</td><td class='n'>0.0439</td></tr>
+<tr class=''><td class='n'>4</td><td>Ветер нам утешенье принес, / И в лазури почуяли мы / Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. <span class='n'>(1)</span></td><td>Adamovich G.V., Последняя любовь | «Вот, под окном идут солдаты...» (1916)</td><td>мне утешенье принесут</td><td class='n'>0.0429</td></tr>
+<tr class=''><td class='n'>5</td><td>Ассирийские крылья стрекоз, / Переборы коленчатой тьмы. / И военной грозой потемнел / Нижний слой помраченных небес, <span class='n'>(3)</span></td><td>Gumilev N.S., Ночь | «Пролетала золотая ночь...» (1917)</td><td>пляшут искры синего огня</td><td class='n'>0.0428</td></tr>
+</table>

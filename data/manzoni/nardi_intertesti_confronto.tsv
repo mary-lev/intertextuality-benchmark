@@ -1,0 +1,33 @@
+entity	in_manzoni_text	raw_name_matches	verified_matches	status	other_commentators	caveat
+Argo/Briareo	yes	26	26	audited	Badini_Confalonieri; Benucci; Bianchi; Bonora; Bricchi; Caretti; DeCristofaro; DeMichelis; Gavino_Oliveri; Jacomuzzi; Lazzarini; Luperini-Brogi; Marchese; Messina; Nicoletti; Poggi_Salani; Raimondi-Bottoni; Sbrilli; Spinazzola; TittaRosa; Travi; Trombatore; Ulivi; Verdino; Viti-Sapegno2005; Viti_Sapegno	OBLIGATORY GLOSS - the names are in Manzoni's own text.
+Parche	yes	25	25	audited	Badini_Confalonieri; Benucci; Bianchi; Bonora; Bricchi; Caretti; DeMichelis; Gavino_Oliveri; Getto; Giacalone; Jacomuzzi; Lazzarini; Marchese; Messina; Nicoletti; Poggi_Salani; Sbrilli; Spinazzola; TittaRosa; Travi; Trombatore; Ulivi; Verdino; Viti-Sapegno2005; Viti_Sapegno	OBLIGATORY GLOSS - the name is in Manzoni's own text.
+Fermo/Sposi promessi	no	24		name-match only	Badini_Confalonieri; Bonora; Bricchi; DeCristofaro; Gavino_Oliveri; Giacalone; Joannes; Luperini-Brogi; Marchese; Messina; Momigliano; Nicoletti; Poggi_Salani; Raimondi-Bottoni; Russo; Sbrilli; Spinazzola; TittaRosa; Travi; Trombatore; Ulivi; Verdino; Viti-Sapegno2005; Viti_Sapegno	
+Cervantes/Chisciotte	no	20	20	audited	Angelini; Bonora; Bricchi; Caretti; DeCristofaro; Gavino_Oliveri; Giacalone; Messina; Nicoletti; Nigro; Petrocchi; Poggi_Salani; Raimondi-Bottoni; Stella-Repossi; TittaRosa; Travi; Trombatore; Ulivi; Verdino; Viti_Sapegno	Solid: all in the intro manuscript-topos note.
+Walter Scott	no	19	18	audited	Bonora; Bricchi; Caretti; DeCristofaro; Gavino_Oliveri; Giacalone; Luperini-Brogi; Messina; Nicoletti; Nigro; Poggi_Salani; Raimondi-Bottoni; Sbrilli; Stella-Repossi; Travi; Trombatore; Ulivi; Verdino; Viti_Sapegno	Solid: 18 in intro; the Nigro/Luperini counts differ by file.
+Beccaria	no	18		name-match only	Angelini; Badini_Confalonieri; Benucci; Bonora; Gavino_Oliveri; Guerri; Luperini-Brogi; Marchese; Nicoletti; Poggi_Salani; Raimondi-Bottoni; Russo; Stella-Repossi; TittaRosa; Travi; Trombatore; Ulivi; Viti_Sapegno	
+Fauriel	no	16		name-match only	Badini_Confalonieri; Bricchi; Caretti; DeCristofaro; Giacalone; Luperini-Brogi; Messina; Petronio; Poggi_Salani; Raimondi-Bottoni; RigutiniMestica; Stella-Repossi; TittaRosa; Verdino; Viti-Sapegno2005; Viti_Sapegno	
+Galileo	no	15		name-match only	Bianchi; Bonora; DeMichelis; Guerri; Messina; Momigliano; Nicoletti; Petronio; Russo; Spinazzola; TittaRosa; Trombatore; Verdino; Viti-Sapegno2005; Viti_Sapegno	
+Ripamonti	no	15		name-match only	Benucci; Bonora; Gavino_Oliveri; Giacalone; Luperini-Brogi; Marchese; Messina; Nicoletti; Raimondi-Bottoni; Russo; TittaRosa; Travi; Verdino; Viti-Sapegno2005; Viti_Sapegno	
+Ariosto/Furioso	no	12		name-match only	Bonora; Bricchi; Gavino_Oliveri; Giacalone; Guerri; Messina; Nicoletti; Poggi_Salani; RigutiniMestica; Stella-Repossi; Travi; Viti_Sapegno	
+Del romanzo storico	no	12		name-match only	Angelini; Badini_Confalonieri; Bricchi; DeCristofaro; DeMichelis; Giacalone; Luperini-Brogi; RigutiniMestica; Russo; Travi; Verdino; Viti_Sapegno	
+A. Verri	no	11	2	audited	Bonora; Bricchi; Giacalone; Luperini-Brogi; Momigliano; Nicoletti; Poggi_Salani; Raimondi-Bottoni; TittaRosa; Verdino; Viti_Sapegno	MOSTLY FALSE POSITIVE: most cite PIETRO Verri (Storia di Milano / Osservazioni sulla tortura) = different reference. Alessandro Verri's Saffo only in Poggi_Salani, Viti_Sapegno (+Momigliano cites his Notti romane). Date/title vary: Nardi 1780 'di Mitilene'; Poggi_Salani 1782; Viti_Sapegno 'di Lesbo'.
+Marino/marinismo	no	11	9	audited	Angelini; Gavino_Oliveri; Luperini-Brogi; Momigliano; Nicoletti; Raimondi-Bottoni; Russo; TittaRosa; Trombatore; Viti-Sapegno2005; Viti_Sapegno	Solid. 9 quote the same verse; Momigliano/Trombatore/TittaRosa(cap1) use only 'marinismo/marinista' generically. Nardi reads 'meraviglia', most others 'maraviglia'.
+Adelchi/Carmagnola	no	11		name-match only	Angelini; Giacalone; Luperini-Brogi; Marchese; Raimondi-Bottoni; Russo; TittaRosa; Travi; Trombatore; Ulivi; Verdino	
+Cuoco	no	10	10	audited	Bonora; Bricchi; Gavino_Oliveri; Messina; Poggi_Salani; Raimondi-Bottoni; Stella-Repossi; Travi; Ulivi; Viti_Sapegno	Solid: all in the intro manuscript-topos note.
+Vangelo	no	10		name-match only	Angelini; DeMichelis; Lazzarini; Luperini-Brogi; Nicoletti; Raimondi-Bottoni; RigutiniMestica; Russo; Sbrilli; TittaRosa	
+Dante	no	9	2	audited	Bianchi; Bricchi; DeCristofaro; Raimondi-Bottoni; RigutiniMestica; Russo; Stella-Repossi; TittaRosa; Viti_Sapegno	INFLATED: 'Dante Isella' (modern scholar) matches in Raimondi-Bottoni, Stella-Repossi; RigutiniMestica and Russo cite OTHER Dante loci. Same Inf. XXVIII locus as Nardi only in Bianchi and Viti_Sapegno.
+Carlo V	no	9		name-match only	DeCristofaro; DeMichelis; Guerri; Jacomuzzi; Lazzarini; Nicoletti; Poggi_Salani; TittaRosa; Verdino	
+Boccalini	no	6		name-match only	Badini_Confalonieri; Petronio; Poggi_Salani; Raimondi-Bottoni; Russo; TittaRosa	
+Oss. morale cattolica	no	4		name-match only	Bonora; Raimondi-Bottoni; Travi; Trombatore	
+Omero/Iliade	no	3		name-match only	Messina; Russo; Trombatore	
+Sentir Messa	no	3		name-match only	Benucci; Russo; TittaRosa	
+Boiardo	no	2		name-match only	Giacalone; Messina	
+Boccaccio	no	2		name-match only	Guerri; RigutiniMestica	
+Goldoni	no	2		name-match only	Sbrilli; Travi	
+Guicciardini	no	1		name-match only	Russo	
+Machiavelli	no	1		name-match only	Russo	
+Pirandello	no	1		name-match only	Raimondi-Bottoni	
+Balzac/Flaubert	no	1		name-match only	DeCristofaro	
+Rovani	no	0		name-match only		
+Conde/Rocroi	no	0		name-match only		
+San Lorenzo	no	0		name-match only		

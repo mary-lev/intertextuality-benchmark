@@ -1,0 +1,10 @@
+# Experiments (tested with Python 3.12)
+numpy>=2.0
+matplotlib>=3.8
+scipy>=1.11
+pymystem3>=0.2.0
+sentence-transformers>=5.0
+pandas>=2.0          # Latin external check only (parquet texts)
+pyarrow>=14
+# Optional: only to regenerate the LLM reranker's outputs, which are shipped
+anthropic>=0.88.0

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use these data or code, please cite the paper below."
+title: "Attested, Not Exhaustive: data and code"
+type: dataset
+authors:
+  - family-names: Levchenko
+    given-names: Maria
+    orcid: "https://orcid.org/0009-0008-2649-0729"
+    affiliation: University of Bologna
+repository-code: "https://github.com/mary-lev/intertextuality-benchmark"
+license: CC-BY-4.0
+keywords:
+  - intertextuality detection
+  - benchmark construction
+  - scholarly commentary
+  - text reuse
+  - computational literary studies
+preferred-citation:
+  type: conference-paper
+  title: "Attested, Not Exhaustive: Constructing and Evaluating Benchmarks for Literary Intertextuality Detection"
+  authors:
+    - family-names: Levchenko
+      given-names: Maria
+      orcid: "https://orcid.org/0009-0008-2649-0729"
+      affiliation: University of Bologna
+  collection-title: "Proceedings of the Computational Humanities Research Conference 2027"
+  publisher:
+    name: Anthology of Computers and the Humanities
+  year: 2027
