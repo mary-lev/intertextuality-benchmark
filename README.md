@@ -1,6 +1,6 @@
 # Attested, Not Exhaustive: Constructing and Evaluating Benchmarks for Literary Intertextuality Detection
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24309022.svg)](https://doi.org/10.5281/zenodo.24309022)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24309021.svg)](https://doi.org/10.5281/zenodo.24309021)
 
 Data, code and results for the paper *Attested, Not Exhaustive: Constructing and
 Evaluating Benchmarks for Literary Intertextuality Detection*.
@@ -136,5 +136,5 @@ See `LICENSE.md`.
 
 ## Citation
 
-Please cite the paper (see `CITATION.cff`). This release (v1.0.0) is archived on
-Zenodo: https://doi.org/10.5281/zenodo.24309022
+Please cite the paper (see `CITATION.cff`). Every release is archived on Zenodo:
+https://doi.org/10.5281/zenodo.24309021 (all versions; each version has its own DOI).

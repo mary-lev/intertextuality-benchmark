@@ -8,8 +8,8 @@ authors:
     orcid: "https://orcid.org/0009-0008-2649-0729"
     affiliation: University of Bologna
 repository-code: "https://github.com/mary-lev/intertextuality-benchmark"
-doi: 10.5281/zenodo.24309022
-version: v1.0.0
+doi: 10.5281/zenodo.24309021
+version: v1.1.0
 license: CC-BY-4.0
 keywords:
   - intertextuality detection
