@@ -37,7 +37,7 @@ def corpus_lines():
         lns = [l for l in lns if l]
         if lns:
             out[p["poetree_poem_id"]] = lns
-    for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/added_referents.csv", encoding="utf-8")):
+    for r in nb.load_added_referents():
         lns = [nb.norm(ln) for ln in r["full_text"].split("\n")]
         lns = [l for l in lns if l]
         if lns:

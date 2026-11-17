@@ -90,7 +90,7 @@ def load_meta():
     meta = {}
     for p in csv.DictReader(open(nb.HERE + "data/poetree/poetree_full_poems.csv", encoding="utf-8")):
         meta[p["poetree_poem_id"]] = f'{p["author_name"]} — {p["title"]}'.strip(" —")
-    for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/added_referents.csv", encoding="utf-8")):
+    for r in nb.load_added_referents():
         meta[r["extra_id"]] = f'{r["ref_author"]} — {r["ref_title"]}'.strip(" —")
     return meta
 

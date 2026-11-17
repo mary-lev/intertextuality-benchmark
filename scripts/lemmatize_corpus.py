@@ -40,7 +40,7 @@ def main():
     ids, texts = [], []
     for p in csv.DictReader(open(nb.HERE + "data/poetree/poetree_full_poems.csv", encoding="utf-8")):
         ids.append(p["poetree_poem_id"]); texts.append(p["full_text"])
-    for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/added_referents.csv", encoding="utf-8")):
+    for r in nb.load_added_referents():
         ids.append(r["extra_id"]); texts.append(r["full_text"])
     print(f"  {len(ids)} poems", file=sys.stderr)
 

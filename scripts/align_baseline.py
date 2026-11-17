@@ -60,7 +60,7 @@ def main():
     corpus_norm = {}                                   # need normalized text, with newlines kept
     for p in csv.DictReader(open(nb.HERE + "data/poetree/poetree_full_poems.csv", encoding="utf-8")):
         corpus_norm[p["poetree_poem_id"]] = "\n".join(nb.norm(ln) for ln in p["full_text"].split("\n"))
-    for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/added_referents.csv", encoding="utf-8")):
+    for r in nb.load_added_referents():
         corpus_norm[r["extra_id"]] = "\n".join(nb.norm(ln) for ln in r["full_text"].split("\n"))
 
     flat = {pid: t.replace("\n", " ") for pid, t in corpus_norm.items()}

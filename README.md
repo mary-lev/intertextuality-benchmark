@@ -19,7 +19,6 @@ figures/        the paper's figures
 | Path | Content |
 |---|---|
 | `data/russian_poetry/gold.csv` | **The Russian poetry gold: 286 verified relations in one file**, with the full text of the commented poem and, where it is a poem in the corpus, of the referent. |
-| `data/russian_poetry/added_referents.csv` | The 10 referent poems that are not in PoeTree, with the year the period windows use. The experiments add them to the search pool; their texts also appear in `gold.csv`. |
 | `data/russian_poetry/line_pairs.jsonl` | Derived input of the experiments: it gives, per evaluable relation, the line numbers of the fragment in each poem and, for the granularity study, of the stanza(s) containing it (`source_stanza_lines`, from PoeTree's stanza structure). |
 | `data/crime_and_punishment/gold.jsonl` | *Crime and Punishment* gold: 19 New Testament relations from two commentary layers. Five rows carry a corrected verse pointer: `original_nt_ref` keeps the pointer before correction and `correction_note` says what was wrong (one error of the printed apparatus, three of our parsing, one narrowing of scope). |
 | `data/crime_and_punishment/crime_and_punishment.jsonl`, `nt1823.jsonl`, `cs_nt.jsonl` | The novel (3,758 paragraphs), the 1823 Russian New Testament (7,952 verses) and the Church Slavonic New Testament (7,824 verses; Ephesians 2–6 missing), all in modern orthography. |
@@ -35,7 +34,8 @@ figures/        the paper's figures
 | `commented_author`, `commented_work`, `commented_text_id`, `commented_text` | The commented poem: author, title or first line, Poetree id, full text. Relation 60 lists two ids, the poem and a second redaction of it in Poetree; a query's own poem is never a candidate. |
 | `commented_fragment` | The place in the commented poem the commentary points at; empty when the relation concerns the whole poem. |
 | `ref_author`, `ref_title`, `ref_citation` | The referent as the commentary names it, with the words it quotes, if any. |
-| `referent_text_id`, `referent_source`, `referent_status`, `referent_text` | The referent in the search pool: id, origin (`poetree` or `extra`), link status, full text. |
+| `referent_text_id`, `referent_source`, `referent_status`, `referent_text` | The referent in the search pool: id, origin (`poetree` or `extra`), link status, full text. The 10 `extra` referents are poems PoeTree lacks; the experiments add them to the search pool from this file. |
+| `referent_year`, `referent_text_source` | For the 10 `extra` referents only: year of composition (used by the period windows) and the edition the text comes from. |
 | `referent_span` | The referent passage, where the commentary gives one. |
 | `analyst_commented_span`, `analyst_referent_span` | Spans added by the annotator where the commentary names a relation without quoting it. |
 | `category` | `poetry` (168), `foreign` (55), `prose` (30), `cultural` (23), `non_textual` (10). Only `poetry` relations enter the retrieval task. |

@@ -36,8 +36,8 @@ Texts and quotations from other sources are included only so that the results ca
 be reproduced; they remain under their own terms and are not covered by the
 licences above:
 
-- the poem texts in `data/russian_poetry/gold.csv` and `added_referents.csv`, from the
-  PoeTree corpus (Plecháč et al. 2025) and, for the ten poems it lacks, other editions;
+- the poem texts in `data/russian_poetry/gold.csv`, from the PoeTree corpus (Plecháč et
+  al. 2025) and, for the ten poems it lacks, the editions named in `referent_text_source`;
 - the commentary sentences quoted in `data/russian_poetry/gold.csv` (`commentary`),
   from the critical editions listed in Appendix A of the paper;
 - the texts of *Crime and Punishment* (as reproduced by the Russian Virtual

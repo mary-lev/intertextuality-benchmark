@@ -47,13 +47,25 @@ def char_ngrams(t: str, n: int = 4) -> set[str]:
 
 
 # ---------------------------------------------------------------- corpus + index
+def load_added_referents() -> list[dict]:
+    """The referent poems PoeTree lacks, read from the gold (rows whose referent_source is
+    'extra'): id, text, year, author and title, in id order."""
+    rows = {}
+    for r in csv.DictReader(open(HERE + "data/russian_poetry/gold.csv", encoding="utf-8")):
+        if r["referent_source"] == "extra":
+            rows.setdefault(r["referent_text_id"], {
+                "extra_id": r["referent_text_id"], "full_text": r["referent_text"],
+                "year": r["referent_year"], "ref_author": r["ref_author"], "ref_title": r["ref_title"]})
+    return sorted(rows.values(), key=lambda x: int(x["extra_id"].split("-")[1]))
+
+
 def load_corpus() -> dict[str, str]:
     """poetree_poem_id / extra_id -> normalized full text (minus excluded near-duplicates)."""
     corpus = {}
     with open(HERE + "data/poetree/poetree_full_poems.csv", encoding="utf-8") as f:
         for p in csv.DictReader(f):
             corpus[p["poetree_poem_id"]] = norm(p["full_text"])
-    for r in csv.DictReader(open(HERE + "data/russian_poetry/added_referents.csv", encoding="utf-8")):
+    for r in load_added_referents():
         corpus[r["extra_id"]] = norm(r["full_text"])          # off-corpus referents = first-class
     return corpus
 
@@ -67,7 +79,7 @@ def load_years() -> dict[str, int]:
                 years[p["poetree_poem_id"]] = int(float(p["year_created_from"]))
             except (ValueError, TypeError):
                 pass
-    for r in csv.DictReader(open(HERE + "data/russian_poetry/added_referents.csv", encoding="utf-8")):
+    for r in load_added_referents():
         try:
             years[r["extra_id"]] = int(float(r["year"]))
         except (ValueError, TypeError):
