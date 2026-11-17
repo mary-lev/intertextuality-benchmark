@@ -1,5 +1,5 @@
 {
-  "title": "Attested, Not Exhaustive: data and code",
+  "title": "Attested, Not Exhaustive: Constructing and Evaluating Benchmarks for Literary Intertextuality Detection",
   "upload_type": "dataset",
   "description": "<p>Data, code and results for the paper <em>Attested, Not Exhaustive: Constructing and Evaluating Benchmarks for Literary Intertextuality Detection</em> (Computational Humanities Research Conference 2027). Three commentary-derived golds of scholar-attested intertextual relations (Russian poetry; <em>Crime and Punishment</em> against the 1823 New Testament; Dante and the Duecento), the retrieval probes and experiments, the result tables the paper's numbers are read from, and scripts that reproduce them.</p>",
   "creators": [
