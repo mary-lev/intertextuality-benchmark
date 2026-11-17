@@ -1,14 +1,13 @@
 """Dante transfer test: signal-class probes on the per-citation Dante↔Duecento gold.
 
 Does the detectability profile transfer to medieval Italian? Probes mirror the Russian
-factorial's signal classes (factorial.py) over data/dante/gold.csv (built by
-build_dante_citations.py from the DanteSources citations: one row per citation, a Dante
+factorial's signal classes (factorial.py) over data/dante/gold.csv (from the
+DanteSources citations: one row per citation, a Dante
 lemma -> cited verses of a Duecento poem; 431-chunk corpus, 8 authors):
 
   exact surface    ngram   word-2gram idf overlap (language-agnostic)
                    char4   the same score over character 4-grams — the surface variant of
-                           the Russian robustness table (invariance.py); added after the
-                           other Dante results were seen
+                           the Russian robustness table (invariance.py)
   alignment        sw      Smith-Waterman over SURFACE tokens — no Duecento lemmatizer
                            exists in this stack; the Russian probe ran on Mystem lemmas
   rarity bag       bm25    BM25 over surface tokens
@@ -95,7 +94,7 @@ def main():
     rels = list(csv.DictReader(open(nb.HERE + "data/dante/gold.csv", encoding="utf-8")))
     if not OPEN:
         rels = [r for r in rels if r["referent_corpus"] == "verified"]
-    gt = json.load(open(nb.HERE + "data/dante/source/"
+    gt = json.load(open(nb.HERE + "data/dante/"
                         "retrieval_corpus.json", encoding="utf-8"))
     def slug(t, n=4):
         return "-".join(re.findall(r"[a-zàèéìòóù]+", (t or "").lower())[:n])
@@ -110,7 +109,7 @@ def main():
         gold_open = {int(x.split("_")[0][4:]): x.split("@")[1] for r in rels
                      if r["referent_corpus"] != "verified" for x in r["referent_text_id"].split(";")}
         seen = set()
-        for i, p in enumerate(json.load(open(nb.HERE + "data/dante/source/"
+        for i, p in enumerate(json.load(open(nb.HERE + "data/dante/"
                                              "poems_index.json", encoding="utf-8"))):
             key = nb.norm(p["full_text"])
             if i not in gold_open and (slug(p["incipit"]) in cited or key in seen or not key

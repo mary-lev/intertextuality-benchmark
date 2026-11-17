@@ -45,5 +45,6 @@ licences above:
   Testament in `data/crime_and_punishment/`;
 - the idiom list in `data/russian_poetry/idiom_candidates.csv`, from the Russian
   Wiktionary (CC BY-SA);
-- the DanteSources extract and the Biblioteca Italiana texts in `data/dante/source/`;
+- the DanteSources notes quoted in `data/dante/gold.csv` and the Biblioteca Italiana texts in
+  `data/dante/poems_index.json` and `data/dante/retrieval_corpus.json`;
 - the quotations from Nardi's commentary in `data/manzoni/`.
