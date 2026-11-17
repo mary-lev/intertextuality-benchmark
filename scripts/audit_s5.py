@@ -6,7 +6,7 @@ MATCHED population. Prints; changes nothing.
     python scripts/audit_s5.py     # from the release root
 """
 from __future__ import annotations
-import csv, json, subprocess, sys
+import csv
 from collections import defaultdict
 
 import ngram_baseline as nb
@@ -42,11 +42,8 @@ def main():
     ladder = [g for g in gold if any(h in author and h in year for h in g["hit"])]
     print(f"  prior-restriction cohort: {len(ladder)}  (excluded "
           f"{n_tot - len(ladder)}: referent lacks author and/or year metadata)")
-    src = set()
-    for l in open(nb.HERE + "data/russian_poetry/line_pairs.jsonl", encoding="utf-8"):
-        o = json.loads(l)
-        if o["stratum"] == "S1" and o.get("source_stanza_lines"):
-            src.add(o["conn_id"])
+    src = {r["conn_id"] for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/gold.csv", encoding="utf-8"))
+           if r["commented_stanza_lines"]}
     pid1 = {r["conn_id"]: (r["commented_text_id"] or "").split(";")[0]
             for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/gold.csv", encoding="utf-8"))}
     gran, gran_excl = [], []

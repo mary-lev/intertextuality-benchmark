@@ -12,8 +12,8 @@ STANZA PROVENANCE: the local Poetree cache has no stanza structure -- the upstre
 PoeTree API serves per-line `id_stanza`, but poetree_corpus_downloader.py (neighbour
 project, lines 163-174) kept only each line's text and joined with a single newline
 (its `stanza_count` column is really a line count). The true stanza level here uses
-the `source_stanza_lines` field of data/russian_poetry/line_pairs.jsonl: the lines of the stanza(s) containing
-the fragment, derived from stanza ids re-fetched from the API for the commented poems of
+the `commented_stanza_lines` column of data/russian_poetry/gold.csv: the lines of the
+stanza(s) containing the fragment, derived from stanza ids re-fetched from the API for the commented poems of
 this experiment's pool. A CONTEXT WINDOW level (resolved fragment
 lines +-2) is kept as a stanza-independent intermediate. Eval subset: S1 connections
 with resolved source lines AND a stanza map (same subset at every granularity).
@@ -25,7 +25,7 @@ level (the dilution covariate).
 Deterministic. Writes results/russian_poetry/granularity.csv + prints the table.
 """
 from __future__ import annotations
-import csv, json, math, sys
+import csv, math, sys
 from collections import defaultdict
 
 import ngram_baseline as nb
@@ -43,7 +43,7 @@ CTX = 2
 
 def stanza_query(commented_text: str, stanza_line_idxs: list) -> str:
     """All lines of the commented poem in the stanza(s) that contain a resolved
-    fragment line (`source_stanza_lines` of data/russian_poetry/line_pairs.jsonl)."""
+    fragment line (`commented_stanza_lines` of gold.csv)."""
     lines = [ln.strip() for ln in commented_text.split("\n") if ln.strip()]
     return " ".join(lines[i] for i in stanza_line_idxs)
 
@@ -79,17 +79,14 @@ def main():
             inv[w].add(pid)
     mys = Mystem()
 
-    # source-line resolutions (committed artifact) + poem texts for stanza queries
-    src_lines, stanza_lines = {}, {}
-    for l in open(nb.HERE + "data/russian_poetry/line_pairs.jsonl", encoding="utf-8"):
-        o = json.loads(l)
-        if o["stratum"] == "S1" and o["source_lines"]:
-            src_lines[o["conn_id"]] = o["source_lines"]
-            if o.get("source_stanza_lines"):
-                stanza_lines[o["conn_id"]] = o["source_stanza_lines"]
-    poem_text = {}
+    # fragment and stanza lines of the commented poem + poem texts for stanza queries
+    src_lines, stanza_lines, poem_text = {}, {}, {}
     for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/gold.csv", encoding="utf-8")):
         poem_text[r["conn_id"]] = r["commented_text"]
+        if r["commented_lines"]:
+            src_lines[r["conn_id"]] = [int(i) for i in r["commented_lines"].split(";")]
+        if r["commented_stanza_lines"]:
+            stanza_lines[r["conn_id"]] = [int(i) for i in r["commented_stanza_lines"].split(";")]
 
     sub = []
     for cid, g in gold.items():

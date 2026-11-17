@@ -19,7 +19,6 @@ figures/        the paper's figures
 | Path | Content |
 |---|---|
 | `data/russian_poetry/gold.csv` | **The Russian poetry gold: 286 verified relations in one file**, with the full text of the commented poem and, where it is a poem in the corpus, of the referent. |
-| `data/russian_poetry/line_pairs.jsonl` | Derived input of the experiments: it gives, per evaluable relation, the line numbers of the fragment in each poem and, for the granularity study, of the stanza(s) containing it (`source_stanza_lines`, from PoeTree's stanza structure). |
 | `data/russian_poetry/idiom_candidates.csv` | The 216 idioms of the shared-idiom comparison: entries of the Russian Wiktionary category «Фразеологизмы/ru» with three or more words found in 2 to 99 corpus poems, not reviewed by a reader. |
 | `data/crime_and_punishment/gold.jsonl` | *Crime and Punishment* gold: 19 New Testament relations from two commentary layers. Five rows carry a corrected verse pointer: `original_nt_ref` keeps the pointer before correction and `correction_note` says what was wrong (one error of the printed apparatus, three of our parsing, one narrowing of scope). |
 | `data/crime_and_punishment/crime_and_punishment.jsonl`, `nt1823.jsonl`, `cs_nt.jsonl` | The novel (3,758 paragraphs), the 1823 Russian New Testament (7,952 verses) and the Church Slavonic New Testament (7,824 verses; Ephesians 2–6 missing), all in modern orthography. |
@@ -33,6 +32,7 @@ figures/        the paper's figures
 | `conn_id`, `edition` | Relation id; the commented poet's edition (seven editions). |
 | `commented_author`, `commented_work`, `commented_text_id`, `commented_text` | The commented poem: author, title or first line, Poetree id, full text. Relation 60 lists two ids, the poem and a second redaction of it in Poetree; a query's own poem is never a candidate. |
 | `commented_fragment` | The place in the commented poem the commentary points at; empty when the relation concerns the whole poem. |
+| `commented_lines`, `commented_stanza_lines` | The lines of the commented poem that the fragment (or the annotator's span) occupies, and the lines of the stanza(s) containing them, used by the query-context analysis of §5 (stanzas from PoeTree's stanza structure). Line numbers count the non-empty lines of `commented_text` from 0, separated by `;`. |
 | `ref_author`, `ref_title`, `ref_citation` | The referent as the commentary names it, with the words it quotes, if any. |
 | `referent_text_id`, `referent_source`, `referent_status`, `referent_text` | The referent in the search pool: id, origin (`poetree` or `extra`), link status, full text. The 10 `extra` referents are poems PoeTree lacks; the experiments add them to the search pool from this file. |
 | `referent_year`, `referent_text_source` | For the 10 `extra` referents only: year of composition (used by the period windows) and the edition the text comes from. |
