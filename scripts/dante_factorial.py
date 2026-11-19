@@ -92,25 +92,31 @@ def main():
     import numpy as np
 
     rels = list(csv.DictReader(open(nb.HERE + "data/dante/gold.csv", encoding="utf-8")))
-    if not OPEN:
-        rels = [r for r in rels if r["referent_corpus"] == "verified"]
-    gt = json.load(open(nb.HERE + "data/dante/"
-                        "retrieval_corpus.json", encoding="utf-8"))
+    poems = json.load(open(nb.HERE + "data/dante/poems_index.json",
+                           encoding="utf-8"))
     def slug(t, n=4):
         return "-".join(re.findall(r"[a-zàèéìòóù]+", (t or "").lower())[:n])
+    # the 60-poem subset: the poems its relations cite (chunk ids <bibit work id>_chunk_<n>@<slug>),
+    # cut into four-line chunks
+    subset = {(x.split("_")[0], x.split("@")[1]) for r in rels if r["referent_corpus"] == "verified"
+              for x in r["referent_text_id"].split(";")}
+    if not OPEN:
+        rels = [r for r in rels if r["referent_corpus"] == "verified"]
     corpus = {}
-    for c in gt:
-        corpus[f'{c["chunk_id"]}@{slug(c["poem_incipit"])}'] = c["chunk_text"]
+    for p in poems:
+        if (p["bibit_id"], slug(p["incipit"])) in subset:
+            lns = [l for l in p["full_text"].split("\n") if l.strip()]
+            for a in range(0, len(lns), 4):
+                corpus[f'{p["bibit_id"]}_chunk_{a // 4 + 1}@{slug(p["incipit"])}'] = "\n".join(lns[a:a + 4])
     lemma_cap, pair_cap = WPAIR_LEMMA_CAP, WPAIR_PAIR_CAP
     if OPEN:
         n_cited = len(corpus)
-        cited = {slug(c["poem_incipit"]) for c in gt}
+        cited = {s for _, s in subset}
         # cited poems that are not in the 431-chunk corpus: position in poems_index -> slug
         gold_open = {int(x.split("_")[0][4:]): x.split("@")[1] for r in rels
                      if r["referent_corpus"] != "verified" for x in r["referent_text_id"].split(";")}
         seen = set()
-        for i, p in enumerate(json.load(open(nb.HERE + "data/dante/"
-                                             "poems_index.json", encoding="utf-8"))):
+        for i, p in enumerate(poems):
             key = nb.norm(p["full_text"])
             if i not in gold_open and (slug(p["incipit"]) in cited or key in seen or not key
                                        or slug(p["incipit"]) in gold_open.values()):

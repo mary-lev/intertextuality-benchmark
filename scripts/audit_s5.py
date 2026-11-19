@@ -1,13 +1,18 @@
 """Pre-freeze audit for paper §5 (reviewer request, 2026-08-15): one reproducible
 script that recomputes the cohort accounting, corpus counts, control-seed summary,
-which relations each probe finds, and the rerank-vs-author-baseline comparison on a
-MATCHED population. Prints; changes nothing.
+which relations each probe finds, the rerank-vs-author-baseline comparison on a
+MATCHED population, the robustness check without the analyst-span relations, and query
+lengths (attested fragments vs idiom lines). Prints;
+changes nothing.
 
     python scripts/audit_s5.py     # from the release root
 """
 from __future__ import annotations
 import csv
 from collections import defaultdict
+
+import math
+import statistics
 
 import ngram_baseline as nb
 import bm25_baseline as bm
@@ -70,6 +75,9 @@ def main():
               f"  gap {r['gap_R@10']}   (5 seeded pools per query x rung)")
         print(f"    exact expectation {r['exact_R@10']}  gap {r['exact_gap_R@10']};  competitors above chance in "
               f"{r['comp_more']}, below in {r['comp_fewer']} of {r['comp_n']} (median ratio {r['comp_median_ratio']})")
+        k, m = int(r["comp_more"]), int(r["comp_fewer"])
+        p = min(1.0, 2 * sum(math.comb(k + m, i) for i in range(min(k, m) + 1)) / 2 ** (k + m))
+        print(f"    two-sided sign test, more vs fewer competitors than chance: p={p:.2g}")
 
     print("\n== 4. which relations each probe finds (S1, top ten) ==")
     def top10(v):
@@ -105,6 +113,10 @@ def main():
     print(f"  at most one shared content word: {len(one)}; in a top ten: "
           f"{ {p: sum(1 for k in one if p in found.get(k, set())) for p in probes + ['e5']} }, fusion "
           f"{sum(1 for k in one if k in sl and top10(sl[k]['gold_rank_fused']))}")
+    bands3 = ("verbatim", "close", "loose")
+    print(f"  that class by band: { {b: sum(1 for k in one if fr[k]['band'] == b) for b in bands3} }; "
+          f"left out of the scale (single word): "
+          f"{ {b: sum(1 for k, w in lx.items() if w == 'single_word' and fr[k]['band'] == b) for b in bands3} }")
 
     print("\n== 5. rerank vs author-baseline on a MATCHED population ==")
     rr = {}
@@ -128,11 +140,38 @@ def main():
         order = sorted(pool, key=lambda pid: (-sc.get(pid, 0.0), pid))
         orc.append(next((i for i, pid in enumerate(order, 1) if pid in g["hit"]), None))
         rrk.append(rr[g["conn_id"]])
-    print(f"  matched population: S1 & author-metadata & rerank-pool  n={len(matched)}")
+    print(f"  matched population: S1 & dated referent (dated poems all have an author) & rerank-pool  n={len(matched)}")
     print(f"  author-baseline (BM25 in oeuvre): R@1 {recall_at_k(orc, 1):.3f}  "
           f"R@10 {recall_at_k(orc, 10):.3f}")
     print(f"  fused->rerank pipeline:           R@1 {recall_at_k(rrk, 1):.3f}  "
           f"R@10 {recall_at_k(rrk, 10):.3f}")
+
+    print("\n== 6. robustness: the banded relations without an analyst span (R@10) ==")
+    analyst = {r["conn_id"] for r in csv.DictReader(open(nb.HERE + "data/russian_poetry/gold.csv", encoding="utf-8"))
+               if (r["analyst_commented_span"] or "").strip() or (r["analyst_referent_span"] or "").strip()}
+    def rank(v):
+        v = (v or "").strip()
+        return int(float(v)) if v not in ("", "NA", "None") else None
+    cols = [("surface", lambda k: fr[k]["ngram"]), ("alignment", lambda k: fr[k]["passim"]),
+            ("BM25", lambda k: fr[k]["bm25"]), ("collocation", lambda k: fr[k]["wpair"]),
+            ("MiniLM", lambda k: fr[k]["dense"]), ("E5", lambda k: e5.get(k)),
+            ("fusion", lambda k: sl[k]["gold_rank_fused"] if k in sl else "")]
+    bands = ("verbatim", "close", "loose")
+    print(f"  banded relations with an analyst span: {sum(1 for k in s1 if k in analyst)} of {len(s1)}")
+    for label, keep in (("all banded", lambda k: True), ("without analyst span", lambda k: k not in analyst)):
+        ks = {b: [k for k in s1 if fr[k]["band"] == b and keep(k)] for b in bands}
+        print(f"  {label}: " + " / ".join(f"{b} n={len(ks[b])}" for b in bands))
+        for name, get in cols:
+            print(f"    {name:12s} " + "  ".join(f"{recall_at_k([rank(get(k)) for k in ks[b]], 10):.2f}"
+                                          for b in bands))
+
+
+    print("\n== 7. query length in words: attested fragments vs idiom lines ==")
+    s1g = [g for g in gold if g["stratum"] == "S1"]
+    print(f"  attested fragments (n={len(s1g)}): median {statistics.median(len(g['q_frag'].split()) for g in s1g)}; "
+          f"verbatim and close: {statistics.median(len(g['q_frag'].split()) for g in s1g if g['band'] in ('verbatim', 'close'))}")
+    q = {(r["idiom"], r["q_poem"], r["query"]) for r in csv.DictReader(open(nb.HERE + "results/russian_poetry/idiom_control_lexical.csv", encoding="utf-8"))}
+    print(f"  idiom query lines (n={len(q)}): median {statistics.median(len(x[2].split()) for x in q)}")
 
 
 if __name__ == "__main__":

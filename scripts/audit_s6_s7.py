@@ -37,6 +37,14 @@ def section6():
           f"missed: {[r['nt_ref'] for r in scope if not r['methods']]}")
     for r in scope:
         print(f"    {r['id']:5s} {r['nt_ref']:12s} {', '.join(r['methods']) or '-'}")
+    # the nine eligible rows the thresholds were adjusted on vs the eligible rows no setting was tuned on
+    tuned = [r for r in scope if r["id"].startswith("c") or r["id"] in ("t1", "t2", "t3")]
+    held = [r for r in scope if r not in tuned]
+    lex = {"sw", "cs_sw", "nt_surface", "cs_surface", "char", "wchar", "bm25", "tesserae", "wpair"}
+    for label, rs in (("rows the thresholds were adjusted on", tuned), ("rows nothing was tuned on (held out)", held)):
+        print(f"  {label}: in scope {len(rs)} {dict(Counter(gold[r['id']]['type'] for r in rs))}; "
+              f"reached {sum(bool(r['methods']) for r in rs)}; by a lexical probe "
+              f"{sum(bool(set(r['methods']) & lex) for r in rs)}; by rank fusion {sum('fusion' in r['methods'] for r in rs)}")
 
     nov = {r["ref"]: r["text"] for r in jsonl(nb.HERE + "data/crime_and_punishment/crime_and_punishment.jsonl")}
     nt = {r["ref"]: r["text"] for r in jsonl(nb.HERE + "data/crime_and_punishment/nt1823.jsonl")}

@@ -46,5 +46,5 @@ licences above:
 - the idiom list in `data/russian_poetry/idiom_candidates.csv`, from the Russian
   Wiktionary (CC BY-SA);
 - the DanteSources notes quoted in `data/dante/gold.csv` and the Biblioteca Italiana texts in
-  `data/dante/poems_index.json` and `data/dante/retrieval_corpus.json`;
+  `data/dante/poems_index.json`;
 - the quotations from Nardi's commentary in `data/manzoni/`.

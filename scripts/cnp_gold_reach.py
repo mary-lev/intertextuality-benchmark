@@ -7,7 +7,7 @@ on its own output; nothing is combined.
 
     python scripts/cnp_gold_reach.py     # from the release root -> results/crime_and_punishment/cnp_gold_reach.json
 
-Method names (Table 4 family in brackets): sw [alignment], cs_sw [alignment, Church Slavonic
+Method names (Table 3 family in brackets): sw [alignment], cs_sw [alignment, Church Slavonic
 text], nt_surface and cs_surface [surface, words; against the 1823 / Church Slavonic text],
 char and wchar [surface, character 4-grams], bm25 [BM25], tesserae and wpair [collocation],
 dense [dense], rerank [reranker], fusion [rank fusion].
